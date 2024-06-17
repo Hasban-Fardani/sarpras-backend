@@ -6,8 +6,12 @@
     },
     "routes": [
     {
+        "src": "/docs",
+        "dest": "/public/docs/index.html"
+    },
+    {
         "src": "/docs/(.*)",
-        "dest": "/public/docs/(.*)"
+        "dest": "/public/docs/$1"
     },
     {
         "src": "/(.*)",
