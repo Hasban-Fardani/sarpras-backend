@@ -14,6 +14,10 @@
         "dest": "/public/docs/$1"
     },
     {
+        "src": "/api/(.*)",
+        "dest": "/api/index.php/api"
+    },
+    {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }
