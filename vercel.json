@@ -5,18 +5,22 @@
         "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
     "routes": [
-    {
-        "src": "/docs",
-        "dest": "/public/docs/index.html"
-    },
-    {
-        "src": "/docs/(.*)",
-        "dest": "/public/docs/$1"
-    },
-    {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }
+        {
+            "src": "/docs",
+            "dest": "/public/docs/index.html"
+        },
+        {
+            "src": "/docs/(.*)",
+            "dest": "/public/docs/$1"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/api"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
     ],
     "env": {
         "APP_ENV": "production",

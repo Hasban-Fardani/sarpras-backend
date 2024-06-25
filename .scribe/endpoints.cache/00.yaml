@@ -24,11 +24,11 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      username:
-        name: username
+      nip:
+        name: nip
         description: ''
         required: true
-        example: admin
+        example: '2121021210'
         type: string
         enumValues: []
         exampleWasSpecified: true
@@ -43,8 +43,209 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      username: admin
+      nip: '2121021210'
       password: password123
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"current_page":1,"data":[{"id":1,"name":"Patsy Zemlak","username":"spinka.hal","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":2,"name":"Prof. Veda Kub III","username":"renner.tatum","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":3,"name":"Bessie Stokes","username":"oryan","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":4,"name":"Desiree Kuhlman","username":"vena03","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":5,"name":"Mr. Nolan Doyle","username":"okey62","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":6,"name":"Prof. Vilma Breitenberg MD","username":"gottlieb.dimitri","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"},{"id":7,"name":"Antonietta Blick","username":"nbreitenberg","email_verified_at":null,"created_at":"2024-06-17T17:24:36.000000Z","updated_at":"2024-06-17T17:24:36.000000Z"},{"id":8,"name":"Stephanie McCullough","username":"ckunze","email_verified_at":null,"created_at":"2024-06-17T17:24:36.000000Z","updated_at":"2024-06-17T17:24:36.000000Z"},{"id":9,"name":"Cristina Schoen II","username":"odurgan","email_verified_at":null,"created_at":"2024-06-17T17:24:36.000000Z","updated_at":"2024-06-17T17:24:36.000000Z"},{"id":10,"name":"Carole Mraz","username":"rosemary71","email_verified_at":null,"created_at":"2024-06-17T17:24:36.000000Z","updated_at":"2024-06-17T17:24:36.000000Z"},{"id":11,"name":"admin 1","username":"admin","email_verified_at":null,"created_at":"2024-06-17T17:24:36.000000Z","updated_at":"2024-06-17T17:24:36.000000Z"}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/users?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/users?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/users?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/users","per_page":15,"prev_page_url":null,"to":11,"total":11}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/users
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{username}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: spinka.hal
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: spinka.hal
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"name":"Patsy Zemlak","username":"spinka.hal","email_verified_at":null,"created_at":"2024-06-17T17:24:35.000000Z","updated_at":"2024-06-17T17:24:35.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/users/{username}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: spinka.hal
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: spinka.hal
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/users/{username}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: spinka.hal
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      username: spinka.hal
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []

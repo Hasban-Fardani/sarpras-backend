@@ -11,13 +11,13 @@ class LoginController extends Controller
     /**
      * Login endpoint
      * 
-     * @bodyParam username string required Example: admin
+     * @bodyParam nip string required Example: 2121021210
      * @bodyParam password string required Example: password123
      */
     public function __invoke(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'username' => 'required|string|min:4',
+            'nip' => 'required|number',
             'password' => 'required|min:5'
         ]);
 
