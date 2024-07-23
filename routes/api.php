@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -28,4 +29,6 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('/stats/item', [DashboardController::class, 'getStatsItem']);
         }); 
     });
+
+    Route::apiResource('/category', CategoryController::class);
 });
