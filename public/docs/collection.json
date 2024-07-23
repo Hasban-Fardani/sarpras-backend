@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "2ec343ac-8ad1-4bb0-ba49-43fdad7fdee7",
+        "_postman_id": "643e8161-5ee0-452b-8661-35b34d11e63c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -122,7 +122,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"deserunt\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"

@@ -1,6 +1,6 @@
 {
     "version": 2,
-      "framework": null,
+    "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
@@ -12,10 +12,6 @@
         {
             "src": "/docs/(.*)",
             "dest": "/public/docs/$1"
-        },
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/api"
         },
         {
             "src": "/(.*)",
