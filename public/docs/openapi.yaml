@@ -324,6 +324,19 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: deserunt
+              required:
+                - name
       security: []
   '/api/v1/users/{username}':
     get:

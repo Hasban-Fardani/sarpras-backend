@@ -16,8 +16,9 @@ class LoginController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $type = $request->input('by', 'nip');
         $validator = Validator::make($request->all(), [
-            'nip' => 'required|number',
+            $type => 'required',
             'password' => 'required|min:5'
         ]);
 
@@ -35,10 +36,12 @@ class LoginController extends Controller
             ], 401);
         }
 
-        $token = auth()->user()->createToken('accessToken')->plainTextToken;
+        $user = auth()->user();
+        $token = $user->createToken('accessToken')->plainTextToken;
         return response()->json([
             'message' => 'login success',
-            'token' => $token
+            'token' => $token,
+            'user' => $user
         ]);
     }
 }

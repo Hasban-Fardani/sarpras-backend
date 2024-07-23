@@ -521,7 +521,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/users" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"deserunt\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -534,9 +538,14 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "deserunt"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -612,7 +621,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-v1-users"
+               value="deserunt"
+               data-component="body">
+    <br>
+<p>Example: <code>deserunt</code></p>
+        </div>
+        </form>
 
                     <h2 id="endpoints-GETapi-v1-users--username-">Display the specified resource.</h2>
 
