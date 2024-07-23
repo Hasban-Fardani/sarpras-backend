@@ -25,6 +25,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'role' => fake()->randomElement(['admin', 'pengawas', 'unit']),
             'username' => fake()->unique()->userName(),
             'email' => fake()->unique()->safeEmail(),
             'nip' => fake()->numberBetween(1000000000, 9999999999),

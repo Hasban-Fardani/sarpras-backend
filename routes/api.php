@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -31,4 +32,6 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::apiResource('/category', CategoryController::class);
+
+    Route::apiResource('/item', ItemController::class);
 });
