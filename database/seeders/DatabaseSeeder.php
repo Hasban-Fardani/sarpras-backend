@@ -54,15 +54,15 @@ class DatabaseSeeder extends Seeder
         Supplier::factory(10)->create();
 
         ItemIn::factory(10)->create();
-        ItemInDetail::factory(10)->create();
+        ItemInDetail::factory(30)->create();
 
         ItemOut::factory(10)->create();
-        ItemOutDetail::factory(10)->create();
+        ItemOutDetail::factory(30)->create();
 
         SubmissionItem::factory(10)->create();
-        SubmissionItemDetail::factory(10)->create();
+        SubmissionItemDetail::factory(30)->create();
 
         RequestItem::factory(10)->create();
-        RequestItemDetail::factory(10)->create();
+        RequestItemDetail::factory(30)->create();
     }
 }

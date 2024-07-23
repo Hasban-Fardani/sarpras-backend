@@ -17,7 +17,7 @@ class ItemInDetailController extends Controller
     {
         return response()->json([
             'message' => 'success get item in detail',
-            'data' => $itemIn->details()
+            'data' => $itemIn->details
         ]);
     }
 
@@ -69,7 +69,7 @@ class ItemInDetailController extends Controller
         $itemInDetail->update($request->all());
         return response()->json([
             'message' => 'success update item in detail',
-            'data' => $itemIn->details()
+            'data' => $itemIn->details
         ]);
     }
 
@@ -81,7 +81,7 @@ class ItemInDetailController extends Controller
         $itemInDetail->delete();
         return response()->json([
             'message' => 'success delete item in detail',
-            'data' => $itemIn->details()
+            'data' => $itemIn->details
         ]);
     }
 }
