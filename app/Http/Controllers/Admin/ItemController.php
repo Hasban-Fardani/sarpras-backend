@@ -14,9 +14,25 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
+        $data = Item::with('category:id,name');
+
+        // search by name
+        $data->when($request->search, function ($data) use ($request) {
+            $data->where(function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            });
+        });
+
+        // filter by category
+        $data->when($request->category_id, function ($data) use ($request) {
+            $data->where('category_id', $request->category_id);
+        });
+
+        $data = $data->get();
+
         return response()->json([
             'message' => 'success get all items',
-            'data' => Item::all()
+            'data' => $data
         ]);
     }
 
