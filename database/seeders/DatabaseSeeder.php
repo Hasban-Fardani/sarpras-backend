@@ -28,5 +28,12 @@ class DatabaseSeeder extends Seeder
             'nip' => 10232132,
             'name' => 'unit RPL'
         ]);
+
+        User::factory()->create([
+            'email' => 'pengawas@example',
+            'username' => 'pengawas',
+            'nip' => 10232133,
+            'name' => 'Pak Hendro'
+        ]);
     }
 }

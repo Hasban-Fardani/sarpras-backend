@@ -4,6 +4,7 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -22,13 +23,12 @@ return Application::configure(basePath: dirname(__DIR__))
             'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         ]);
 
-        //
+        $middleware->append(\App\Http\Middleware\ForceJsonRequestHeader::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
-        if ($exceptions instanceof AuthenticationException) {{
+        $exceptions->render(function (AuthenticationException $e, Request $request) {
             return response()->json([
-                'message' => 'unauthoized',
+                'message' => 'Not Authorized',
             ], 401);
-        }}
+        });
     })->create();
