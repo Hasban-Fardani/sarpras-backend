@@ -35,7 +35,7 @@ class CategoryController extends Controller
             return response()->json([
                 'message' => 'invalid fields',
                 'errors' => $validator->errors() 
-            ], 412);
+            ], 422);
         }
 
         // create new category
@@ -75,7 +75,7 @@ class CategoryController extends Controller
             return response()->json([
                 'message' => 'invalid fields',
                 'errors' => $validator->errors() 
-            ], 412);
+            ], 422);
         }
 
         // update category
