@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -18,5 +19,13 @@ Route::prefix('/auth')->group(function () {
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    
+    // Admin Routes
+    Route::prefix('/admin')->group(function () {
+        // Dashboard Routes
+        Route::prefix('/dashboard')->group(function () {
+            Route::get('/counts', [DashboardController::class, 'getCounts']);
+            Route::get('/stats/request', [DashboardController::class, 'getStatsRequest']);
+            Route::get('/stats/item', [DashboardController::class, 'getStatsItem']);
+        }); 
+    });
 });
