@@ -19,93 +19,6 @@ paths:
       tags:
         - Endpoints
       security: []
-  /_ignition/health-check:
-    get:
-      summary: ''
-      operationId: get_ignitionHealthCheck
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  can_execute_commands: true
-                properties:
-                  can_execute_commands:
-                    type: boolean
-                    example: true
-      tags:
-        - Endpoints
-      security: []
-  /_ignition/execute-solution:
-    post:
-      summary: ''
-      operationId: post_ignitionExecuteSolution
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                solution:
-                  type: string
-                  description: ''
-                  example: dignissimos
-                parameters:
-                  type: object
-                  description: ''
-                  example: null
-                  properties: {  }
-              required:
-                - solution
-      security: []
-  /_ignition/update-config:
-    post:
-      summary: ''
-      operationId: post_ignitionUpdateConfig
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                theme:
-                  type: string
-                  description: ''
-                  example: light
-                  enum:
-                    - light
-                    - dark
-                    - auto
-                editor:
-                  type: string
-                  description: ''
-                  example: quisquam
-                hide_solutions:
-                  type: boolean
-                  description: ''
-                  example: false
-              required:
-                - theme
-                - editor
-                - hide_solutions
-      security: []
   /:
     get:
       summary: ''
@@ -276,7 +189,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: est
+                  example: quis
               required:
                 - name
       security: []
@@ -320,7 +233,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: illum
+                  example: voluptatum
               required:
                 - name
       security: []
@@ -382,31 +295,31 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rd
+                  example: idnhfkffhubkalce
                 merk:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lhbelkxvtmbb
+                  example: yardufokakghrtuppbouqhkl
                 unit:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hlageesholj
+                  example: lnvpvrpfjoooouht
                 stock:
                   type: integer
                   description: satuan.
-                  example: 6
+                  example: 11
                 min_stock:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 2
                 category_id:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 7
                 price:
                   type: integer
                   description: ''
-                  example: 20
+                  example: 15
               required:
                 - name
                 - merk
@@ -456,31 +369,31 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: scxko
+                  example: fyitxpxzqe
                 merk:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xmnzknsnrt
+                  example: dgjnvauzzpshqubonvvr
                 unit:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qjueucw
+                  example: hdszxwbxlmh
                 stock:
                   type: integer
                   description: satuan.
-                  example: 6
+                  example: 7
                 min_stock:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 1
                 category_id:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 7
                 price:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 6
               required:
                 - name
                 - merk
@@ -508,23 +421,6 @@ paths:
         required: true
         schema:
           type: integer
-  /up:
-    get:
-      summary: ''
-      operationId: getUp
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n        <title>Laravel</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Styles -->\n        <script src=\"https://cdn.tailwindcss.com\"></script>\n\n        <script>\n            tailwind.config = {\n                theme: {\n                    extend: {\n                        fontFamily: {\n                            sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif', \"Apple Color Emoji\", \"Segoe UI Emoji\"],\n                        }\n                    }\n                }\n            }\n        </script>\n    </head>\n    <body class=\"antialiased\">\n        <div class=\"relative sm:flex sm:justify-center sm:items-center min-h-screen bg-gray-100 selection:bg-red-500 selection:text-white\">\n            <div class=\"w-full sm:w-3/4 xl:w-1/2 mx-auto p-6\">\n                <div class=\"px-6 py-4 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex items-center focus:outline focus:outline-2 focus:outline-red-500\">\n                    <div class=\"relative flex h-3 w-3\">\n                      <span class=\"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75\"></span>\n                      <span class=\"relative inline-flex rounded-full h-3 w-3 bg-green-400\"></span>\n                    </div>\n\n                    <div class=\"ml-6\">\n                        <h2 class=\"text-xl font-semibold text-gray-900\">Application up</h2>\n\n                        <p class=\"mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed\">\n                            HTTP request received.\n\n                                                            Response successfully rendered in 718ms.\n                                                    </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n</html>\n"
-      tags:
-        - Endpoints
-      security: []
 tags:
   -
     name: Endpoints

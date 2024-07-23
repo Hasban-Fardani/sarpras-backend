@@ -34,161 +34,9 @@ endpoints:
           cache-control: 'no-cache, private'
           access-control-allow-origin: 'http://localhost:3000'
           access-control-allow-credentials: 'true'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImJiZDBhcXQwNVVvSW5tT25zWlVkaFE9PSIsInZhbHVlIjoiWkFvT2JMdXF0b1F5M1JUN3ZOUGFxZDRLN2UwRUNMWkhHY0pQZDI4dUs0L3RySi8zSlM3OW1CS2lXVDhkUTZ4bTlwZDY2THlYNCt3MWRjMkJWRW1acGxkd3FRQVg3K01MaEwzRWtDdHhNVFdQaXZqalk3MGRCVUhweHZvNjRNTnoiLCJtYWMiOiJjY2M0NzkxMmYwZTI5NzA5ZjNjOWQzZThmYWNjYmUyZmQ4YzcxZjlmMGNiODMwMDQ2NDU1MDk3MDEwYzFiZDVmIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik9UZ2lTWjcrdU56OXdNUzdXeHVjRUE9PSIsInZhbHVlIjoic1hmcC9jZGhEb21oRy9lVURlWUhxMFpMNXlUSUl6NUg5RGhHY2NPQnZSV1dGaGY1YUFLSGxlYlBZejEvWWFCNXRtRnJHaTlXdHZrVkFmU0duTlcyWW9UYWc0L01mUlcxbGF5aFdKSHhTT0xmck90Z1p0NkIvUU5RQi9uN0NUWTYiLCJtYWMiOiJlNjc0MDA0MzZmMTJlMjJkY2RjYTkwYzM0MmNhMDRmODE4NGRlNjJkMzYzOTcxZGNiYTEyNWQ3OWE1OGU2ODVjIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; 5GREWRLpy41gEdn0tyqO9EjHruNWPvbuuTj8hM4Z=eyJpdiI6Ik9ZNWpyelliZE51dEJtaCtzNlA3ekE9PSIsInZhbHVlIjoidXRWR28rRDd0ejVYV25za2Y2KzFjL25XZDZqYVhKNXVqN2kvMDBldlYxb2FyNHljR2JMUmhraFNUQVRzNmpLRnIwVFRRaUVGc3RkMGgxbURwRDNGZHlzbDRqRHNrUGMvZEJSN3B4NlFMYmNCZm1VRDRUbFBTTWJwQW5IYTJiWlhiQTRYcmdMT3J6bVp1Q1hTWmY2dmlCTk9lOUJwN3RjS1paTDZCbWtzNnlVRDBDSkJmbG5Gc1RGVis5OHNqNmovZS9CamRwVHZXOGJ4WkdZTmwzckVuTmlaakF1VlVtYysrc3lrTmhtOUNLaFV3Z0Z6K2hNNnNteEloSTdLem05V1N2OE41WGZJTXlaRExJbjFqVUxUUjlreHdWK25Ca2UveEphTGZKUGxIT2Z6Rnlyb0JLeXlURmhock4vZFZJL1VTMVNxbU91UkwwTDRiUllTeFBRUHJjbmVGbDNLa0czcjBiQ3AremxaR01hOTAvUHMvZHAzZkltS1c4TzNMbjNLcEhEVXVOV3BmQXUvVkJ5L2NkVWtvUT09IiwibWFjIjoiMjIwY2FlZTBlZWFiMzQ0ODIwMDdmOTBkZGM5MzcwZGJkNGQyODRiNTk1NGIxNzFjMzk4YmM0ZTIzMTBmMGUzYSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImF3UnB0UURYMGh2ZTFLVlNLdS9xbnc9PSIsInZhbHVlIjoiMGNqZmlxZUJGL2xQcHAveWRNc2dTb0V5U3I1dHRveWdqNmlmRWxYWmNUdjdkYVNQZHUxUGlpZk0zcm9BTFhubWszc1cwMkU5L25JK0VIYTBkZTRlN3N1bjhxczRORkpob245ZGpLNmNUTCtiSGwwMHdPdFpvZS9VNGNSRlhwTFkiLCJtYWMiOiI4NTA5ZDZmMGI2MTMyNmU5Y2E1Yjg1MmI2MDE2NmYwNTM4YTA1ODI4YTc3NjdlZjQyM2Y3ODk0NjQzMWQyYzU2IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InNFNXJZbkJFUlYzaEF5RVZTQlFiSnc9PSIsInZhbHVlIjoieFJVdlo5RmwrUElheWpRcnNKU0xNakQ4N2kxYnd5djNrSkltQnhKN3dXQmF3UWhpcCt1YlBzS2F5MDBKSlYvZ1ZrZVBtR1JYK2tUUjd0bkp0QXdFaVBZMFVWeFFzcVQxT3Q4N2tDa2lmOTg5TElxS0JNVU83UXB4azN2d3BlcWQiLCJtYWMiOiJmYmMxNjQzYThjOTg0MjE5NzAyMThiY2Y3ZTE3YjhhMzc2YjdmN2U4MGM5YTVhYjU1ZWUyZGEzYWQyZWY5MTc5IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; ejksO7DhlzryHngdllD0DBdPDBgGzGG6mvygIHOZ=eyJpdiI6ImQ1KytKeWY0Z3ZEZFJpNVBaSHV1aVE9PSIsInZhbHVlIjoid2lmd29oRkF6OUI3U095eWVDUkpNdDdjNy95NG9sYTBnUTlIelg1VURuc2V2WCtVN2dsY0hLbzRicDN1WHNDVTFUUmhmRDk2VVlCSXFzODlUdGNGYThyNSs5aEs0T0V2SW14U2FYUU1IVXlQb0szOTk5MHdFaTkxNGYra2VKWDN2RU1KYW05VjUxaVpkZnpQYmxRZGYyNDhCT201V2pidmx3R21iUzh5UjRLSHU4My9SWktyam5NbVhVa3VHTTFJMGNTREJmemsxYXNqVVpBVFZhaisrakxGdVZnYlpWZWFvd1pNU1R4MWtQYURQWmc4VHUyVDF1YWdyMEVHcit2V0oxakVkRGFFVEVjMWRkbmltMlZRRC9rUWZXNXgyaVdQMk9qMzhxRnQzeWZveTk0b05WZ3pwN3VvWVlVYnBuOUlOYWNua3NwSHJYYXViMFByK2M4K2FIYlNWMHBwQlVGdWFyKzRtOHlwY29YYmFIeTBCZkZ6R05HN20vUTMycXFJUENSdG80S09mbVdOeWhsd2o3THlGUT09IiwibWFjIjoiMGY5MTMzZWNiOGQ3OTlmNjBhNDE0MmFmZjRiMmRhMWMwNDIxMmVlMTVjMjg5YmM5Y2JjM2NlODMwYmE4NjdlNSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
         description: null
         custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: _ignition/health-check
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"can_execute_commands":true}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: 'http://localhost:3000'
-          access-control-allow-credentials: 'true'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: _ignition/execute-solution
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      solution:
-        name: solution
-        description: ''
-        required: true
-        example: dignissimos
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      parameters:
-        name: parameters
-        description: ''
-        required: false
-        example: null
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      solution: dignissimos
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: _ignition/update-config
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      theme:
-        name: theme
-        description: ''
-        required: true
-        example: light
-        type: string
-        enumValues:
-          - light
-          - dark
-          - auto
-        exampleWasSpecified: false
-        custom: []
-      editor:
-        name: editor
-        description: ''
-        required: true
-        example: quisquam
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      hide_solutions:
-        name: hide_solutions
-        description: ''
-        required: true
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanBodyParameters:
-      theme: light
-      editor: quisquam
-      hide_solutions: false
-    fileParameters: []
-    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -500,13 +348,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: est
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: est
+      name: quis
     fileParameters: []
     responses: []
     responseFields: []
@@ -601,13 +449,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: illum
+        example: voluptatum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: illum
+      name: voluptatum
     fileParameters: []
     responses: []
     responseFields: []
@@ -721,7 +569,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rd
+        example: idnhfkffhubkalce
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -730,7 +578,7 @@ endpoints:
         name: merk
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: lhbelkxvtmbb
+        example: yardufokakghrtuppbouqhkl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -739,7 +587,7 @@ endpoints:
         name: unit
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hlageesholj
+        example: lnvpvrpfjoooouht
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -748,7 +596,7 @@ endpoints:
         name: stock
         description: satuan.
         required: true
-        example: 6
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -757,7 +605,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 19
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -766,7 +614,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: 16
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -775,19 +623,19 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 20
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: rd
-      merk: lhbelkxvtmbb
-      unit: hlageesholj
-      stock: 6
-      min_stock: 19
-      category_id: 16
-      price: 20
+      name: idnhfkffhubkalce
+      merk: yardufokakghrtuppbouqhkl
+      unit: lnvpvrpfjoooouht
+      stock: 11
+      min_stock: 2
+      category_id: 7
+      price: 15
     fileParameters: []
     responses: []
     responseFields: []
@@ -882,7 +730,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: scxko
+        example: fyitxpxzqe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -891,7 +739,7 @@ endpoints:
         name: merk
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: xmnzknsnrt
+        example: dgjnvauzzpshqubonvvr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -900,7 +748,7 @@ endpoints:
         name: unit
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: qjueucw
+        example: hdszxwbxlmh
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -909,7 +757,7 @@ endpoints:
         name: stock
         description: satuan.
         required: true
-        example: 6
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -918,7 +766,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 9
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -927,7 +775,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: 8
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -936,19 +784,19 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 16
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: scxko
-      merk: xmnzknsnrt
-      unit: qjueucw
-      stock: 6
-      min_stock: 9
-      category_id: 8
-      price: 16
+      name: fyitxpxzqe
+      merk: dgjnvauzzpshqubonvvr
+      unit: hdszxwbxlmh
+      stock: 7
+      min_stock: 1
+      category_id: 7
+      price: 6
     fileParameters: []
     responses: []
     responseFields: []
@@ -991,97 +839,6 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: up
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |
-          <!DOCTYPE html>
-          <html lang="en">
-              <head>
-                  <meta charset="utf-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-                  <title>Laravel</title>
-
-                  <!-- Fonts -->
-                  <link rel="preconnect" href="https://fonts.bunny.net">
-                  <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-                  <!-- Styles -->
-                  <script src="https://cdn.tailwindcss.com"></script>
-
-                  <script>
-                      tailwind.config = {
-                          theme: {
-                              extend: {
-                                  fontFamily: {
-                                      sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji"],
-                                  }
-                              }
-                          }
-                      }
-                  </script>
-              </head>
-              <body class="antialiased">
-                  <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-gray-100 selection:bg-red-500 selection:text-white">
-                      <div class="w-full sm:w-3/4 xl:w-1/2 mx-auto p-6">
-                          <div class="px-6 py-4 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex items-center focus:outline focus:outline-2 focus:outline-red-500">
-                              <div class="relative flex h-3 w-3">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
-                              </div>
-
-                              <div class="ml-6">
-                                  <h2 class="text-xl font-semibold text-gray-900">Application up</h2>
-
-                                  <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                      HTTP request received.
-
-                                                                      Response successfully rendered in 718ms.
-                                                              </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </body>
-          </html>
-        headers:
-          content-type: 'text/html; charset=UTF-8'
-          cache-control: 'no-cache, private'
-          access-control-allow-origin: 'http://localhost:3000'
-          access-control-allow-credentials: 'true'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Im1NWk1PRVlSZ1lWY280OE95eEhpYkE9PSIsInZhbHVlIjoiRlk1eG5tQkFWSmxlZVhaSk5LM2EvY1J0dmc4bHNicXl0MGxJaUlaUTJMLzdzTVZvRWFqa0NBSjBmZUM4ZjIzdGh4MS9PUFJLNm9JelhySFlDQkhTb0JNRGd5UG9Md2tleTVob2lqbmxCWmF2RVV2NlM3SitRbndPRjYreHJkOGsiLCJtYWMiOiJmMzZkZDI5ZDc5NTNkMTdiZmVlYjcxMDNmZGJhMjE0ZTYzNzcyNjlhYmQxZTVlNDE5MzAzMzAwOTQwYzA2MDhkIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IlZJM2lOQzhxY3pQdG43WHozUm9ldVE9PSIsInZhbHVlIjoiM3hpYnNZQUVBalFVaHFSZlNDdTV0czNlL0JuK1M0dTlZZXZxZHl1K2czcGd0bW5kYTdDSk1KVUhWZW5KWFc2SVBiblBUWVB3S1gzTHB4M0FpU3o2THRubk9iQnNhUEU5K0pXU1MvczBIb0ZKU2w1OXhZUHJjdTVJaDluNXFHZGkiLCJtYWMiOiJmNjNhZTc0YTMzMzIzOWUwMGIyMDI0MTVmODdjNzdmZmZkNzJmZjY0ZDc2ZTcwZDViZjllMGVlOWNmYWY0ZWU3IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; 5GREWRLpy41gEdn0tyqO9EjHruNWPvbuuTj8hM4Z=eyJpdiI6InVCeHpkUW1sS21CYStqZEE0N2FxMWc9PSIsInZhbHVlIjoiQ1lJWEdydHc3c0hSbnoxYWo0VG9ISEp3NVJKN1pxd08zWkNRMDNjU3ZEbFJIcUQxYVEyZE54MEtnc241bVoxaStNNUxMdjE5c1lzdWhlV2RPNnJGaGZ5bFFrYmg5dUNxTHNTbi9pQlpTd2R1WitEWHBWNWFlVlRKZ1VCaXhJWVBEQTQwb3ZZdTg2QllUNDEwV0V1djZTVjRHVkt6SW01dE9ISnpWcldYMk41YXdpd1IzZ21ucjk5b2xYbXJYcGdPd1FSNlhQT05aZENqUzdJdlMxbGZ2UStoQ1o0REI0a1B1eUdDeGVnTHRESndGRUpxMlRGcDByVFhraWcrZUFpR1VKRHFPTU03MEFiSDd5WjZ5ejhSVVNLUm5xb0VmVDVMQm5CZ0UvWGN0cGNwM1gyY243dUpxWG9nSzlmd0VkbXJOOGl3QUF1TzlMWjROVUZpQU5NOHV6LzN0Q0lrbWNsNW4rRWc5YzAyaG51Rkh6V2lROTQ1ZnZWZ0UzOHpjN042OFhLVnlIeWFESjRPK1REbEwreHNHUT09IiwibWFjIjoiMjU1MDkxMzE3Y2E5Mjg1YTFjZTQ5ODJiZjdlZmY1YzYwZjNjMzliYWQzZTE4NTM5ZWJkNjZiYTJlMGZkNGM5ZCIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; qIdVNQtYBmjCTScpTKTUZhBMQ9rNrTYbmQ73XGYm=eyJpdiI6ImdvMkZadERoMFVLWTBEd01KV3ZXSmc9PSIsInZhbHVlIjoiUi81UVV6c1pLM3RBWWZScGwzbmQ0TllPZzNSaHVPc1VQbUhTZ3VuejBnYWZpZmpwbEVwTCtxTVdSN3BWZVBWR2hRaU1YUXhZZnNzV2M3WnlPT0MxNkJPaEJkeXdUajZvV2dQbGt1bm10RWVyZS9XNFovTFJuV3FXVmpGUng3UDNDb0V2SG5oQ3JDc2dGbTB5ekZnZEtBMHVLVk80a2lqOC91cSsrVE41S0hHaFpVY29pc1A1YVpMbkxJb3lNWUJBWU01ZCtOWDgwTk0zVmxOU3JBZVBkR3FHanF5Qit3RUFTL3NCS1JPdHZYNW5mRGtyM0kyRXpHOG9PbDFlTThLbGxtUE5JOUhTdWF2VlA3Qk1LRWtSeHJndmhFVk9PdXl5alhTWnBud29ORVNiZStMYUdhQnVMZ2cxV0xRNERZcEZhWnQvTTVtalB2K2pWenNvWmZEU00vNkdoYytBODZxakNBUDBXcEx6UkpoTFhmY3dlSmlxQTVrcTkrRjRaZDBIIiwibWFjIjoiMzQyNDRjZDRmNTMxMDMyNTEzNTY1NTBhY2JkM2JlMDg5ZDIxYWQxODQ3YmRjNWVmNTQ5NjM3YjdmYWI5NWVhZSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
-        description: null
-        custom: []
     responseFields: []
     auth: []
     controller: null
