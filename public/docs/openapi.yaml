@@ -7,7 +7,132 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
-  /api/v1/login:
+  /sanctum/csrf-cookie:
+    get:
+      summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      operationId: returnAnEmptyResponseSimplyToTriggerTheStorageOfTheCSRFCookieInTheBrowser
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Endpoints
+      security: []
+  /_ignition/health-check:
+    get:
+      summary: ''
+      operationId: get_ignitionHealthCheck
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  can_execute_commands: true
+                properties:
+                  can_execute_commands:
+                    type: boolean
+                    example: true
+      tags:
+        - Endpoints
+      security: []
+  /_ignition/execute-solution:
+    post:
+      summary: ''
+      operationId: post_ignitionExecuteSolution
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                solution:
+                  type: string
+                  description: ''
+                  example: dignissimos
+                parameters:
+                  type: object
+                  description: ''
+                  example: null
+                  properties: {  }
+              required:
+                - solution
+      security: []
+  /_ignition/update-config:
+    post:
+      summary: ''
+      operationId: post_ignitionUpdateConfig
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                theme:
+                  type: string
+                  description: ''
+                  example: light
+                  enum:
+                    - light
+                    - dark
+                    - auto
+                editor:
+                  type: string
+                  description: ''
+                  example: quisquam
+                hide_solutions:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - theme
+                - editor
+                - hide_solutions
+      security: []
+  /:
+    get:
+      summary: ''
+      operationId: get
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'hello, please visit /docs for documentation'
+                  docs: 'http://localhost:8000/docs'
+                properties:
+                  message:
+                    type: string
+                    example: 'hello, please visit /docs for documentation'
+                  docs:
+                    type: string
+                    example: 'http://localhost:8000/docs'
+      tags:
+        - Endpoints
+      security: []
+  /auth/login:
     post:
       summary: 'Login endpoint'
       operationId: loginEndpoint
@@ -23,296 +148,113 @@ paths:
             schema:
               type: object
               properties:
-                nip:
-                  type: string
-                  description: ''
-                  example: '2121021210'
                 password:
                   type: string
                   description: ''
                   example: password123
+                nip:
+                  type: string
+                  description: ''
+                  example: '2121021210'
               required:
-                - nip
                 - password
+                - nip
       security: []
-  /api/v1/users:
+  /auth/logout:
+    post:
+      summary: ''
+      operationId: postAuthLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /admin/dashboard/counts:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: ''
+      operationId: getAdminDashboardCounts
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  current_page: 1
-                  data:
-                    -
-                      id: 1
-                      name: 'Patsy Zemlak'
-                      username: spinka.hal
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 2
-                      name: 'Prof. Veda Kub III'
-                      username: renner.tatum
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 3
-                      name: 'Bessie Stokes'
-                      username: oryan
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 4
-                      name: 'Desiree Kuhlman'
-                      username: vena03
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 5
-                      name: 'Mr. Nolan Doyle'
-                      username: okey62
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 6
-                      name: 'Prof. Vilma Breitenberg MD'
-                      username: gottlieb.dimitri
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:35.000000Z'
-                      updated_at: '2024-06-17T17:24:35.000000Z'
-                    -
-                      id: 7
-                      name: 'Antonietta Blick'
-                      username: nbreitenberg
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:36.000000Z'
-                      updated_at: '2024-06-17T17:24:36.000000Z'
-                    -
-                      id: 8
-                      name: 'Stephanie McCullough'
-                      username: ckunze
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:36.000000Z'
-                      updated_at: '2024-06-17T17:24:36.000000Z'
-                    -
-                      id: 9
-                      name: 'Cristina Schoen II'
-                      username: odurgan
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:36.000000Z'
-                      updated_at: '2024-06-17T17:24:36.000000Z'
-                    -
-                      id: 10
-                      name: 'Carole Mraz'
-                      username: rosemary71
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:36.000000Z'
-                      updated_at: '2024-06-17T17:24:36.000000Z'
-                    -
-                      id: 11
-                      name: 'admin 1'
-                      username: admin
-                      email_verified_at: null
-                      created_at: '2024-06-17T17:24:36.000000Z'
-                      updated_at: '2024-06-17T17:24:36.000000Z'
-                  first_page_url: 'http://localhost:8000/api/v1/users?page=1'
-                  from: 1
-                  last_page: 1
-                  last_page_url: 'http://localhost:8000/api/v1/users?page=1'
-                  links:
-                    -
-                      url: null
-                      label: '&laquo; Previous'
-                      active: false
-                    -
-                      url: 'http://localhost:8000/api/v1/users?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: 'Next &raquo;'
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost:8000/api/v1/users'
-                  per_page: 15
-                  prev_page_url: null
-                  to: 11
-                  total: 11
+                  message: 'Not Authorized'
                 properties:
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        name: 'Patsy Zemlak'
-                        username: spinka.hal
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 2
-                        name: 'Prof. Veda Kub III'
-                        username: renner.tatum
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 3
-                        name: 'Bessie Stokes'
-                        username: oryan
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 4
-                        name: 'Desiree Kuhlman'
-                        username: vena03
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 5
-                        name: 'Mr. Nolan Doyle'
-                        username: okey62
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 6
-                        name: 'Prof. Vilma Breitenberg MD'
-                        username: gottlieb.dimitri
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:35.000000Z'
-                        updated_at: '2024-06-17T17:24:35.000000Z'
-                      -
-                        id: 7
-                        name: 'Antonietta Blick'
-                        username: nbreitenberg
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:36.000000Z'
-                        updated_at: '2024-06-17T17:24:36.000000Z'
-                      -
-                        id: 8
-                        name: 'Stephanie McCullough'
-                        username: ckunze
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:36.000000Z'
-                        updated_at: '2024-06-17T17:24:36.000000Z'
-                      -
-                        id: 9
-                        name: 'Cristina Schoen II'
-                        username: odurgan
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:36.000000Z'
-                        updated_at: '2024-06-17T17:24:36.000000Z'
-                      -
-                        id: 10
-                        name: 'Carole Mraz'
-                        username: rosemary71
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:36.000000Z'
-                        updated_at: '2024-06-17T17:24:36.000000Z'
-                      -
-                        id: 11
-                        name: 'admin 1'
-                        username: admin
-                        email_verified_at: null
-                        created_at: '2024-06-17T17:24:36.000000Z'
-                        updated_at: '2024-06-17T17:24:36.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        name:
-                          type: string
-                          example: 'Patsy Zemlak'
-                        username:
-                          type: string
-                          example: spinka.hal
-                        email_verified_at:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: '2024-06-17T17:24:35.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-06-17T17:24:35.000000Z'
-                  first_page_url:
+                  message:
                     type: string
-                    example: 'http://localhost:8000/api/v1/users?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
+                    example: 'Not Authorized'
+      tags:
+        - Endpoints
+      security: []
+  /admin/dashboard/stats/request:
+    get:
+      summary: ''
+      operationId: getAdminDashboardStatsRequest
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
                     type: string
-                    example: 'http://localhost:8000/api/v1/users?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost:8000/api/v1/users?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: '&laquo; Previous'
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
+                    example: 'Not Authorized'
+      tags:
+        - Endpoints
+      security: []
+  /admin/dashboard/stats/item:
+    get:
+      summary: ''
+      operationId: getAdminDashboardStatsItem
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
                     type: string
-                    example: null
-                  path:
+                    example: 'Not Authorized'
+      tags:
+        - Endpoints
+      security: []
+  /category:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
                     type: string
-                    example: 'http://localhost:8000/api/v1/users'
-                  per_page:
-                    type: integer
-                    example: 15
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 11
-                  total:
-                    type: integer
-                    example: 11
+                    example: 'Not Authorized'
       tags:
         - Endpoints
       security: []
@@ -334,53 +276,29 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: deserunt
+                  example: est
               required:
                 - name
       security: []
-  '/api/v1/users/{username}':
+  '/category/{id}':
     get:
       summary: 'Display the specified resource.'
       operationId: displayTheSpecifiedResource
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 1
-                    name: 'Patsy Zemlak'
-                    username: spinka.hal
-                    email_verified_at: null
-                    created_at: '2024-06-17T17:24:35.000000Z'
-                    updated_at: '2024-06-17T17:24:35.000000Z'
+                  message: 'Not Authorized'
                 properties:
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 1
-                      name:
-                        type: string
-                        example: 'Patsy Zemlak'
-                      username:
-                        type: string
-                        example: spinka.hal
-                      email_verified_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2024-06-17T17:24:35.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2024-06-17T17:24:35.000000Z'
+                  message:
+                    type: string
+                    example: 'Not Authorized'
       tags:
         - Endpoints
       security: []
@@ -392,6 +310,19 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: illum
+              required:
+                - name
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -405,12 +336,195 @@ paths:
     parameters:
       -
         in: path
-        name: username
-        description: ''
-        example: spinka.hal
+        name: id
+        description: 'The ID of the category.'
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
+  /item:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: rd
+                merk:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: lhbelkxvtmbb
+                unit:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hlageesholj
+                stock:
+                  type: integer
+                  description: satuan.
+                  example: 6
+                min_stock:
+                  type: integer
+                  description: ''
+                  example: 19
+                category_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                price:
+                  type: integer
+                  description: ''
+                  example: 20
+              required:
+                - name
+                - merk
+                - unit
+                - stock
+                - min_stock
+                - category_id
+                - price
+      security: []
+  '/item/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Not Authorized'
+                properties:
+                  message:
+                    type: string
+                    example: 'Not Authorized'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: scxko
+                merk:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xmnzknsnrt
+                unit:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qjueucw
+                stock:
+                  type: integer
+                  description: satuan.
+                  example: 6
+                min_stock:
+                  type: integer
+                  description: ''
+                  example: 9
+                category_id:
+                  type: integer
+                  description: ''
+                  example: 8
+                price:
+                  type: integer
+                  description: ''
+                  example: 16
+              required:
+                - name
+                - merk
+                - unit
+                - stock
+                - min_stock
+                - category_id
+                - price
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the item.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /up:
+    get:
+      summary: ''
+      operationId: getUp
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n        <title>Laravel</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Styles -->\n        <script src=\"https://cdn.tailwindcss.com\"></script>\n\n        <script>\n            tailwind.config = {\n                theme: {\n                    extend: {\n                        fontFamily: {\n                            sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif', \"Apple Color Emoji\", \"Segoe UI Emoji\"],\n                        }\n                    }\n                }\n            }\n        </script>\n    </head>\n    <body class=\"antialiased\">\n        <div class=\"relative sm:flex sm:justify-center sm:items-center min-h-screen bg-gray-100 selection:bg-red-500 selection:text-white\">\n            <div class=\"w-full sm:w-3/4 xl:w-1/2 mx-auto p-6\">\n                <div class=\"px-6 py-4 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex items-center focus:outline focus:outline-2 focus:outline-red-500\">\n                    <div class=\"relative flex h-3 w-3\">\n                      <span class=\"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75\"></span>\n                      <span class=\"relative inline-flex rounded-full h-3 w-3 bg-green-400\"></span>\n                    </div>\n\n                    <div class=\"ml-6\">\n                        <h2 class=\"text-xl font-semibold text-gray-900\">Application up</h2>\n\n                        <p class=\"mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed\">\n                            HTTP request received.\n\n                                                            Response successfully rendered in 718ms.\n                                                    </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n</html>\n"
+      tags:
+        - Endpoints
+      security: []
 tags:
   -
     name: Endpoints

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "643e8161-5ee0-452b-8661-35b34d11e63c",
+        "_postman_id": "8e17c5a3-0585-4d3f-a108-86b0550493a7",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,15 +20,15 @@
             "description": "",
             "item": [
                 {
-                    "name": "Login endpoint",
+                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/login",
+                            "path": "sanctum\/csrf-cookie",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/login"
+                            "raw": "{{baseUrl}}\/sanctum\/csrf-cookie"
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -39,25 +39,46 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"nip\":\"2121021210\",\"password\":\"password123\"}"
-                        },
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6ImJiZDBhcXQwNVVvSW5tT25zWlVkaFE9PSIsInZhbHVlIjoiWkFvT2JMdXF0b1F5M1JUN3ZOUGFxZDRLN2UwRUNMWkhHY0pQZDI4dUs0L3RySi8zSlM3OW1CS2lXVDhkUTZ4bTlwZDY2THlYNCt3MWRjMkJWRW1acGxkd3FRQVg3K01MaEwzRWtDdHhNVFdQaXZqalk3MGRCVUhweHZvNjRNTnoiLCJtYWMiOiJjY2M0NzkxMmYwZTI5NzA5ZjNjOWQzZThmYWNjYmUyZmQ4YzcxZjlmMGNiODMwMDQ2NDU1MDk3MDEwYzFiZDVmIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik9UZ2lTWjcrdU56OXdNUzdXeHVjRUE9PSIsInZhbHVlIjoic1hmcC9jZGhEb21oRy9lVURlWUhxMFpMNXlUSUl6NUg5RGhHY2NPQnZSV1dGaGY1YUFLSGxlYlBZejEvWWFCNXRtRnJHaTlXdHZrVkFmU0duTlcyWW9UYWc0L01mUlcxbGF5aFdKSHhTT0xmck90Z1p0NkIvUU5RQi9uN0NUWTYiLCJtYWMiOiJlNjc0MDA0MzZmMTJlMjJkY2RjYTkwYzM0MmNhMDRmODE4NGRlNjJkMzYzOTcxZGNiYTEyNWQ3OWE1OGU2ODVjIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 5GREWRLpy41gEdn0tyqO9EjHruNWPvbuuTj8hM4Z=eyJpdiI6Ik9ZNWpyelliZE51dEJtaCtzNlA3ekE9PSIsInZhbHVlIjoidXRWR28rRDd0ejVYV25za2Y2KzFjL25XZDZqYVhKNXVqN2kvMDBldlYxb2FyNHljR2JMUmhraFNUQVRzNmpLRnIwVFRRaUVGc3RkMGgxbURwRDNGZHlzbDRqRHNrUGMvZEJSN3B4NlFMYmNCZm1VRDRUbFBTTWJwQW5IYTJiWlhiQTRYcmdMT3J6bVp1Q1hTWmY2dmlCTk9lOUJwN3RjS1paTDZCbWtzNnlVRDBDSkJmbG5Gc1RGVis5OHNqNmovZS9CamRwVHZXOGJ4WkdZTmwzckVuTmlaakF1VlVtYysrc3lrTmhtOUNLaFV3Z0Z6K2hNNnNteEloSTdLem05V1N2OE41WGZJTXlaRExJbjFqVUxUUjlreHdWK25Ca2UveEphTGZKUGxIT2Z6Rnlyb0JLeXlURmhock4vZFZJL1VTMVNxbU91UkwwTDRiUllTeFBRUHJjbmVGbDNLa0czcjBiQ3AremxaR01hOTAvUHMvZHAzZkltS1c4TzNMbjNLcEhEVXVOV3BmQXUvVkJ5L2NkVWtvUT09IiwibWFjIjoiMjIwY2FlZTBlZWFiMzQ0ODIwMDdmOTBkZGM5MzcwZGJkNGQyODRiNTk1NGIxNzFjMzk4YmM0ZTIzMTBmMGUzYSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 204,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "GET _ignition\/health-check",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/users",
+                            "path": "_ignition\/health-check",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/users"
+                            "raw": "{{baseUrl}}\/_ignition\/health-check"
                         },
                         "method": "GET",
                         "header": [
@@ -97,19 +118,19 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"current_page\":1,\"data\":[{\"id\":1,\"name\":\"Patsy Zemlak\",\"username\":\"spinka.hal\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":2,\"name\":\"Prof. Veda Kub III\",\"username\":\"renner.tatum\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":3,\"name\":\"Bessie Stokes\",\"username\":\"oryan\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":4,\"name\":\"Desiree Kuhlman\",\"username\":\"vena03\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":5,\"name\":\"Mr. Nolan Doyle\",\"username\":\"okey62\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":6,\"name\":\"Prof. Vilma Breitenberg MD\",\"username\":\"gottlieb.dimitri\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"},{\"id\":7,\"name\":\"Antonietta Blick\",\"username\":\"nbreitenberg\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:36.000000Z\",\"updated_at\":\"2024-06-17T17:24:36.000000Z\"},{\"id\":8,\"name\":\"Stephanie McCullough\",\"username\":\"ckunze\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:36.000000Z\",\"updated_at\":\"2024-06-17T17:24:36.000000Z\"},{\"id\":9,\"name\":\"Cristina Schoen II\",\"username\":\"odurgan\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:36.000000Z\",\"updated_at\":\"2024-06-17T17:24:36.000000Z\"},{\"id\":10,\"name\":\"Carole Mraz\",\"username\":\"rosemary71\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:36.000000Z\",\"updated_at\":\"2024-06-17T17:24:36.000000Z\"},{\"id\":11,\"name\":\"admin 1\",\"username\":\"admin\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:36.000000Z\",\"updated_at\":\"2024-06-17T17:24:36.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/users?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/users?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/users?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/users\",\"per_page\":15,\"prev_page_url\":null,\"to\":11,\"total\":11}",
+                            "body": "{\"can_execute_commands\":true}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "POST _ignition\/execute-solution",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/users",
+                            "path": "_ignition\/execute-solution",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/users"
+                            "raw": "{{baseUrl}}\/_ignition\/execute-solution"
                         },
                         "method": "POST",
                         "header": [
@@ -124,7 +145,388 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"deserunt\"}"
+                            "raw": "{\"solution\":\"dignissimos\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST _ignition\/update-config",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "_ignition\/update-config",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/_ignition\/update-config"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"theme\":\"light\",\"editor\":\"quisquam\",\"hide_solutions\":false}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET \/",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "\/",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"hello, please visit \\\/docs for documentation\",\"docs\":\"http:\\\/\\\/localhost:8000\\\/docs\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Login endpoint",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"password\":\"password123\",\"nip\":\"2121021210\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST auth\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/auth\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET admin\/dashboard\/counts",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/dashboard\/counts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/dashboard\/counts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET admin\/dashboard\/stats\/request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/dashboard\/stats\/request",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/dashboard\/stats\/request"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET admin\/dashboard\/stats\/item",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/dashboard\/stats\/item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/admin\/dashboard\/stats\/item"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "category",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/category"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "category",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/category"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"est\"}"
                         },
                         "description": "",
                         "auth": {
@@ -138,15 +540,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/users\/:username",
+                            "path": "category\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/users\/:username",
+                            "raw": "{{baseUrl}}\/category\/:id",
                             "variable": [
                                 {
-                                    "id": "username",
-                                    "key": "username",
-                                    "value": "spinka.hal",
-                                    "description": ""
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the category."
                                 }
                             ]
                         },
@@ -187,8 +589,8 @@
                                     "value": "true"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"data\":{\"id\":1,\"name\":\"Patsy Zemlak\",\"username\":\"spinka.hal\",\"email_verified_at\":null,\"created_at\":\"2024-06-17T17:24:35.000000Z\",\"updated_at\":\"2024-06-17T17:24:35.000000Z\"}}",
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
                             "name": ""
                         }
                     ]
@@ -198,15 +600,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/users\/:username",
+                            "path": "category\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/users\/:username",
+                            "raw": "{{baseUrl}}\/category\/:id",
                             "variable": [
                                 {
-                                    "id": "username",
-                                    "key": "username",
-                                    "value": "spinka.hal",
-                                    "description": ""
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the category."
                                 }
                             ]
                         },
@@ -221,7 +623,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"illum\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -234,15 +639,15 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/users\/:username",
+                            "path": "category\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/users\/:username",
+                            "raw": "{{baseUrl}}\/category\/:id",
                             "variable": [
                                 {
-                                    "id": "username",
-                                    "key": "username",
-                                    "value": "spinka.hal",
-                                    "description": ""
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the category."
                                 }
                             ]
                         },
@@ -264,6 +669,280 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"rd\",\"merk\":\"lhbelkxvtmbb\",\"unit\":\"hlageesholj\",\"stock\":6,\"min_stock\":19,\"category_id\":16,\"price\":20}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"scxko\",\"merk\":\"xmnzknsnrt\",\"unit\":\"qjueucw\",\"stock\":6,\"min_stock\":9,\"category_id\":8,\"price\":16}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET up",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "up",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/up"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "XSRF-TOKEN=eyJpdiI6Im1NWk1PRVlSZ1lWY280OE95eEhpYkE9PSIsInZhbHVlIjoiRlk1eG5tQkFWSmxlZVhaSk5LM2EvY1J0dmc4bHNicXl0MGxJaUlaUTJMLzdzTVZvRWFqa0NBSjBmZUM4ZjIzdGh4MS9PUFJLNm9JelhySFlDQkhTb0JNRGd5UG9Md2tleTVob2lqbmxCWmF2RVV2NlM3SitRbndPRjYreHJkOGsiLCJtYWMiOiJmMzZkZDI5ZDc5NTNkMTdiZmVlYjcxMDNmZGJhMjE0ZTYzNzcyNjlhYmQxZTVlNDE5MzAzMzAwOTQwYzA2MDhkIiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6IlZJM2lOQzhxY3pQdG43WHozUm9ldVE9PSIsInZhbHVlIjoiM3hpYnNZQUVBalFVaHFSZlNDdTV0czNlL0JuK1M0dTlZZXZxZHl1K2czcGd0bW5kYTdDSk1KVUhWZW5KWFc2SVBiblBUWVB3S1gzTHB4M0FpU3o2THRubk9iQnNhUEU5K0pXU1MvczBIb0ZKU2w1OXhZUHJjdTVJaDluNXFHZGkiLCJtYWMiOiJmNjNhZTc0YTMzMzIzOWUwMGIyMDI0MTVmODdjNzdmZmZkNzJmZjY0ZDc2ZTcwZDViZjllMGVlOWNmYWY0ZWU3IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; 5GREWRLpy41gEdn0tyqO9EjHruNWPvbuuTj8hM4Z=eyJpdiI6InVCeHpkUW1sS21CYStqZEE0N2FxMWc9PSIsInZhbHVlIjoiQ1lJWEdydHc3c0hSbnoxYWo0VG9ISEp3NVJKN1pxd08zWkNRMDNjU3ZEbFJIcUQxYVEyZE54MEtnc241bVoxaStNNUxMdjE5c1lzdWhlV2RPNnJGaGZ5bFFrYmg5dUNxTHNTbi9pQlpTd2R1WitEWHBWNWFlVlRKZ1VCaXhJWVBEQTQwb3ZZdTg2QllUNDEwV0V1djZTVjRHVkt6SW01dE9ISnpWcldYMk41YXdpd1IzZ21ucjk5b2xYbXJYcGdPd1FSNlhQT05aZENqUzdJdlMxbGZ2UStoQ1o0REI0a1B1eUdDeGVnTHRESndGRUpxMlRGcDByVFhraWcrZUFpR1VKRHFPTU03MEFiSDd5WjZ5ejhSVVNLUm5xb0VmVDVMQm5CZ0UvWGN0cGNwM1gyY243dUpxWG9nSzlmd0VkbXJOOGl3QUF1TzlMWjROVUZpQU5NOHV6LzN0Q0lrbWNsNW4rRWc5YzAyaG51Rkh6V2lROTQ1ZnZWZ0UzOHpjN042OFhLVnlIeWFESjRPK1REbEwreHNHUT09IiwibWFjIjoiMjU1MDkxMzE3Y2E5Mjg1YTFjZTQ5ODJiZjdlZmY1YzYwZjNjMzliYWQzZTE4NTM5ZWJkNjZiYTJlMGZkNGM5ZCIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; qIdVNQtYBmjCTScpTKTUZhBMQ9rNrTYbmQ73XGYm=eyJpdiI6ImdvMkZadERoMFVLWTBEd01KV3ZXSmc9PSIsInZhbHVlIjoiUi81UVV6c1pLM3RBWWZScGwzbmQ0TllPZzNSaHVPc1VQbUhTZ3VuejBnYWZpZmpwbEVwTCtxTVdSN3BWZVBWR2hRaU1YUXhZZnNzV2M3WnlPT0MxNkJPaEJkeXdUajZvV2dQbGt1bm10RWVyZS9XNFovTFJuV3FXVmpGUng3UDNDb0V2SG5oQ3JDc2dGbTB5ekZnZEtBMHVLVk80a2lqOC91cSsrVE41S0hHaFpVY29pc1A1YVpMbkxJb3lNWUJBWU01ZCtOWDgwTk0zVmxOU3JBZVBkR3FHanF5Qit3RUFTL3NCS1JPdHZYNW5mRGtyM0kyRXpHOG9PbDFlTThLbGxtUE5JOUhTdWF2VlA3Qk1LRWtSeHJndmhFVk9PdXl5alhTWnBud29ORVNiZStMYUdhQnVMZ2cxV0xRNERZcEZhWnQvTTVtalB2K2pWenNvWmZEU00vNkdoYytBODZxakNBUDBXcEx6UkpoTFhmY3dlSmlxQTVrcTkrRjRaZDBIIiwibWFjIjoiMzQyNDRjZDRmNTMxMDMyNTEzNTY1NTBhY2JkM2JlMDg5ZDIxYWQxODQ3YmRjNWVmNTQ5NjM3YjdmYWI5NWVhZSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 08:52:29 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n        <title>Laravel<\/title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https:\/\/fonts.bunny.net\">\n        <link href=\"https:\/\/fonts.bunny.net\/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" \/>\n\n        <!-- Styles -->\n        <script src=\"https:\/\/cdn.tailwindcss.com\"><\/script>\n\n        <script>\n            tailwind.config = {\n                theme: {\n                    extend: {\n                        fontFamily: {\n                            sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif', \"Apple Color Emoji\", \"Segoe UI Emoji\"],\n                        }\n                    }\n                }\n            }\n        <\/script>\n    <\/head>\n    <body class=\"antialiased\">\n        <div class=\"relative sm:flex sm:justify-center sm:items-center min-h-screen bg-gray-100 selection:bg-red-500 selection:text-white\">\n            <div class=\"w-full sm:w-3\/4 xl:w-1\/2 mx-auto p-6\">\n                <div class=\"px-6 py-4 bg-white from-gray-700\/50 via-transparent rounded-lg shadow-2xl shadow-gray-500\/20 flex items-center focus:outline focus:outline-2 focus:outline-red-500\">\n                    <div class=\"relative flex h-3 w-3\">\n                      <span class=\"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75\"><\/span>\n                      <span class=\"relative inline-flex rounded-full h-3 w-3 bg-green-400\"><\/span>\n                    <\/div>\n\n                    <div class=\"ml-6\">\n                        <h2 class=\"text-xl font-semibold text-gray-900\">Application up<\/h2>\n\n                        <p class=\"mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed\">\n                            HTTP request received.\n\n                                                            Response successfully rendered in 718ms.\n                                                    <\/p>\n                    <\/div>\n                <\/div>\n            <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         }
