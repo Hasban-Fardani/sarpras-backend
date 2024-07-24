@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Item;
 use App\Models\ItemIn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +15,10 @@ class ItemInController extends Controller
      */
     public function index(Request $request)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        // get all item-ins
         $data = ItemIn::with('user:id,name');
 
         // search by user name
@@ -32,7 +35,8 @@ class ItemInController extends Controller
             $data->where('supplier_id', $request->supplier_id);
         });
 
-        $data = $data->get();
+        // paginate
+        $data = $data->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
             'message' => 'success get all item-ins',

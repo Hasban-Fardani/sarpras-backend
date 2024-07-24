@@ -40,7 +40,7 @@ class ItemInDetailController extends Controller
             ], 422);
         }
 
-        $itemIn->details()->create($request->all());
+        $itemIn->details()->create($validator->validated());
         return response()->json([
             'message' => 'success add item in detail',
             'data' => $itemIn->details
