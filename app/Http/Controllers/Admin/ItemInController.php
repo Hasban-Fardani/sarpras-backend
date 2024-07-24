@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Item;
 use App\Models\ItemIn;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class ItemInController extends Controller
@@ -72,8 +74,19 @@ class ItemInController extends Controller
         $itemIn = ItemIn::create($data);
         $itemIn->details()->createMany($validatedData['items']);
 
+        // update stock
+        $item_ids = array_column($validatedData['items'], 'item_id');
+        $qtys = array_column($validatedData['items'], 'qty');
+        // get last item stock
+        
+        // Create the SQL query dynamically
+        $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
+
+        // Execute the SQL query
+        DB::statement($sql);
+
         return response()->json([
-            'message' => 'success create item-in',
+            'message' => 'success create item-in and updated stock',
             'data' => $itemIn
         ]);
     }
@@ -94,6 +107,16 @@ class ItemInController extends Controller
      */
     public function destroy(ItemIn $itemIn)
     {
+        // update stock
+        $item_ids = array_column($itemIn->details->toArray(), 'item_id');
+        $qtys = array_column($itemIn->details->toArray(), 'qty');
+        
+        // Create the SQL query dynamically
+        $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
+
+        // Execute the SQL query
+        DB::statement($sql);
+
         $itemIn->delete();
         return response()->json([
             'message' => 'success delete item-in',
