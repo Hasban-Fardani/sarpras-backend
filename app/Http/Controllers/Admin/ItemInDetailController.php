@@ -40,17 +40,17 @@ class ItemInDetailController extends Controller
             ], 422);
         }
 
-        $itemIn->details()->create($request->all());
+        $itemIn->details()->create($validator->validated());
         return response()->json([
             'message' => 'success add item in detail',
-            'data' => $itemIn->details()
+            'data' => $itemIn->details
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ItemIn $itemIn, ItemInDetail $itemInDetail)
+    public function update(Request $request, ItemIn $itemIn, string $idDetails)
     {
         // validate
         $validator = Validator::make($request->all(), [
@@ -66,18 +66,20 @@ class ItemInDetailController extends Controller
             ], 422);
         }
 
+        $itemInDetail = ItemInDetail::find($idDetails);
         $itemInDetail->update($request->all());
         return response()->json([
             'message' => 'success update item in detail',
-            'data' => $itemIn->details
+            'data' => $itemInDetail
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ItemIn $itemIn, ItemInDetail $itemInDetail)
+    public function destroy(ItemIn $itemIn, string $idDetails)
     {
+        $itemInDetail = ItemInDetail::find($idDetails);
         $itemInDetail->delete();
         return response()->json([
             'message' => 'success delete item in detail',

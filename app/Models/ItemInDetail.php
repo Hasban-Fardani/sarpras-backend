@@ -20,4 +20,9 @@ class ItemInDetail extends Model
     {
         return $this->belongsTo(ItemIn::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'id';
+    }
 }

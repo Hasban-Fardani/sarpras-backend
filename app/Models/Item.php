@@ -15,4 +15,9 @@ class Item extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function hasSufficientStock(int $amount): bool
+    {
+        return $this->stock >= $amount;
+    }
 }

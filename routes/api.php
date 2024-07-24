@@ -39,6 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('/item-in', ItemInController::class)
         ->except('update');
-    Route::apiResource('item-in.detail', ItemInDetailController::class);
+    Route::apiResource('item-in.detail', ItemInDetailController::class)
+        ->except('show');
     
 });
