@@ -106,7 +106,7 @@ class ItemOutController extends Controller
     public function show(ItemOut $itemOut)
     {
         return response()->json([
-            'message' => 'success get item-in',
+            'message' => 'success get item-out',
             'data' => $itemOut->load(['operator:id,name', 'division:id,name', 'details'])
         ]);
     }

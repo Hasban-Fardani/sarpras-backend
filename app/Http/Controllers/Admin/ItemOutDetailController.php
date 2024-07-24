@@ -17,7 +17,7 @@ class ItemOutDetailController extends Controller
     public function index(ItemOut $itemOut)
     {
         return response()->json([
-            'message' => 'success get item in detail',
+            'message' => 'success get item out detail',
             'data' => $itemOut->details
         ]);
     }
