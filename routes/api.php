@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\ItemInController;
 use App\Http\Controllers\Admin\ItemInDetailController;
+use App\Http\Controllers\Admin\ItemOutController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -42,4 +43,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('item-in.detail', ItemInDetailController::class)
         ->except('show');
     
+    Route::apiResource('/item-out', ItemOutController::class)
+        ->except('update');
+    Route::apiResource('item-out.detail', ItemInDetailController::class)
+        ->except('show');
 });

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('item_outs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('operator_id')->constrained('users');
+            $table->foreignId('division_id')->constrained('users');
             $table->integer('total_items')->default(0);
             $table->timestamps();
         });
