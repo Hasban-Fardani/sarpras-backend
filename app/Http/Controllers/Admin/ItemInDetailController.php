@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Item;
 use App\Models\ItemIn;
 use App\Models\ItemInDetail;
 use Illuminate\Http\Request;
@@ -40,7 +41,23 @@ class ItemInDetailController extends Controller
             ], 422);
         }
 
+        // check if item exist in item in
+        $itemInDetail = $itemIn->details()->where('item_id', $request->item_id)->first();
+        if ($itemInDetail) {
+            $itemInDetail->update([
+                'qty' => $itemInDetail->qty + $request->qty
+            ]);
+            return response()->json([
+                'message' => 'success update item in detail',
+                'data' => $itemIn->details
+            ]);
+        }
+
         $itemIn->details()->create($validator->validated());
+
+        // add item stock
+        Item::where('id', $request->item_id)->increment('stock', $request->qty);
+
         return response()->json([
             'message' => 'success add item in detail',
             'data' => $itemIn->details
