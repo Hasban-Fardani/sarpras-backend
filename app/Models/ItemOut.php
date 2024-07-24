@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class ItemOut extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function operator() 
+    {
+        return $this->belongsTo(User::class, 'operator_id');
+    }
+
+    public function division() 
+    {
+        return $this->belongsTo(User::class, 'division_id');
+    }
+
+    public function details()
+    {
+        return $this->hasMany(ItemOutDetail::class);
+    }
 }
