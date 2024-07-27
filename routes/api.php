@@ -7,8 +7,11 @@ use App\Http\Controllers\Admin\ItemInController;
 use App\Http\Controllers\Admin\ItemInDetailController;
 use App\Http\Controllers\Admin\ItemOutController;
 use App\Http\Controllers\Admin\ItemOutDetailController;
+use App\Http\Controllers\Admin\SubmissionItemController;
+use App\Http\Controllers\Admin\SubmissionItemDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Supervisor\SubmissionCheckController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
@@ -35,17 +38,24 @@ Route::middleware('auth:sanctum')->group(function () {
         }); 
     });
 
-    Route::apiResource('/category', CategoryController::class);
+    Route::apiResource('category', CategoryController::class);
 
-    Route::apiResource('/item', ItemController::class);
+    Route::apiResource('item', ItemController::class);
 
-    Route::apiResource('/item-in', ItemInController::class)
+    Route::apiResource('item-in', ItemInController::class)
         ->except('update');
     Route::apiResource('item-in.detail', ItemInDetailController::class)
         ->except('show');
     
-    Route::apiResource('/item-out', ItemOutController::class)
+    Route::apiResource('item-out', ItemOutController::class)
         ->except('update');
     Route::apiResource('item-out.detail', ItemOutDetailController::class)
+        ->except('show');
+
+    Route::post('/submission/{submission}/accept', [SubmissionCheckController::class, 'accept']);
+    Route::post('/submission/{submission}/decline', [SubmissionCheckController::class, 'decline']);
+    Route::apiResource('submission', SubmissionItemController::class)
+        ->except('update');
+    Route::apiResource('submission.detail', SubmissionItemDetailController::class)
         ->except('show');
 });

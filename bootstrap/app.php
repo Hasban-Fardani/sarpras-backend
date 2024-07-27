@@ -39,4 +39,10 @@ return Application::configure(basePath: dirname(__DIR__))
                 'message' => 'Not Found',
             ], 404);
         });
+
+        $exceptions->render(function (ModelNotFoundException $e, Request $request) {
+            return response()->json([
+                'message' => 'Model Not Found',
+            ], 404);
+        });
     })->create();

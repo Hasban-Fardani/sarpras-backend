@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('submission_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
+            $table->enum('status', ['diajukan', 'disetujui', 'ditolak'])->default('diajukan');
             $table->integer('total_items');
             $table->timestamps();
         });
