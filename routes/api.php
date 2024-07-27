@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ItemInDetailController;
 use App\Http\Controllers\Admin\ItemOutController;
 use App\Http\Controllers\Admin\ItemOutDetailController;
 use App\Http\Controllers\Admin\SubmissionItemController;
+use App\Http\Controllers\Admin\SubmissionItemDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Supervisor\SubmissionCheckController;
@@ -55,4 +56,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/submission/{submission}/decline', [SubmissionCheckController::class, 'decline']);
     Route::apiResource('submission', SubmissionItemController::class)
         ->except('update');
+    Route::apiResource('submission.detail', SubmissionItemDetailController::class)
+        ->except('show');
 });
