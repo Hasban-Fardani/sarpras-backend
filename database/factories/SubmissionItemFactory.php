@@ -18,6 +18,7 @@ class SubmissionItemFactory extends Factory
     {
         return [
             'user_id' => fake()->numberBetween(1, 10),
+            'status' => fake()->randomElement(['diajukan', 'disetujui', 'ditolak', 'selesai']),
             'total_items' => fake()->numberBetween(1, 100),
         ];
     }
