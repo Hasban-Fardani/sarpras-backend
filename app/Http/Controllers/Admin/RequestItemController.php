@@ -38,7 +38,7 @@ class RequestItemController extends Controller
 
         return response()->json([
             'message' => 'success get all request items',
-            'data' => $data
+            ...$data->toArray()
         ]);
     }
 

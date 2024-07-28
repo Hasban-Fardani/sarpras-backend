@@ -12,11 +12,27 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        // get all categories
+        $data = Category::all();
+
+        // search by name
+        $data->when($request->search, function ($data) use ($request) {
+            $data->where(function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            });
+        });
+
+        // paginate
+        $data = $data->paginate($perPage, ['*'], 'page', $page);
+
         return response()->json([
             'message' => 'success get all categories',
-            'data' => Category::all()
+            ...$data->toArray()
         ]);
     }
 

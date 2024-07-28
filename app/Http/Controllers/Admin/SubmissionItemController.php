@@ -38,7 +38,7 @@ class SubmissionItemController extends Controller
 
         return response()->json([
             'message' => 'success get all submission items',
-            'data' => $data
+            ...$data->toArray()
         ]);
     }
 

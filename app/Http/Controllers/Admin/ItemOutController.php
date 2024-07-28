@@ -45,7 +45,7 @@ class ItemOutController extends Controller
 
         return response()->json([
             'message' => 'success get all item-outs',
-            'data' => $data
+            ...$data->toArray()
         ]);
     }
 
