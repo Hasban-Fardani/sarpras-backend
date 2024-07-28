@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "eb2f64b6-74f5-4ae5-9b11-dcc371dd4caa",
+        "_postman_id": "e5ac3d33-ccb4-4d5f-b6b1-e87e0b83f757",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -62,7 +62,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImF3UnB0UURYMGh2ZTFLVlNLdS9xbnc9PSIsInZhbHVlIjoiMGNqZmlxZUJGL2xQcHAveWRNc2dTb0V5U3I1dHRveWdqNmlmRWxYWmNUdjdkYVNQZHUxUGlpZk0zcm9BTFhubWszc1cwMkU5L25JK0VIYTBkZTRlN3N1bjhxczRORkpob245ZGpLNmNUTCtiSGwwMHdPdFpvZS9VNGNSRlhwTFkiLCJtYWMiOiI4NTA5ZDZmMGI2MTMyNmU5Y2E1Yjg1MmI2MDE2NmYwNTM4YTA1ODI4YTc3NjdlZjQyM2Y3ODk0NjQzMWQyYzU2IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InNFNXJZbkJFUlYzaEF5RVZTQlFiSnc9PSIsInZhbHVlIjoieFJVdlo5RmwrUElheWpRcnNKU0xNakQ4N2kxYnd5djNrSkltQnhKN3dXQmF3UWhpcCt1YlBzS2F5MDBKSlYvZ1ZrZVBtR1JYK2tUUjd0bkp0QXdFaVBZMFVWeFFzcVQxT3Q4N2tDa2lmOTg5TElxS0JNVU83UXB4azN2d3BlcWQiLCJtYWMiOiJmYmMxNjQzYThjOTg0MjE5NzAyMThiY2Y3ZTE3YjhhMzc2YjdmN2U4MGM5YTVhYjU1ZWUyZGEzYWQyZWY5MTc5IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; ejksO7DhlzryHngdllD0DBdPDBgGzGG6mvygIHOZ=eyJpdiI6ImQ1KytKeWY0Z3ZEZFJpNVBaSHV1aVE9PSIsInZhbHVlIjoid2lmd29oRkF6OUI3U095eWVDUkpNdDdjNy95NG9sYTBnUTlIelg1VURuc2V2WCtVN2dsY0hLbzRicDN1WHNDVTFUUmhmRDk2VVlCSXFzODlUdGNGYThyNSs5aEs0T0V2SW14U2FYUU1IVXlQb0szOTk5MHdFaTkxNGYra2VKWDN2RU1KYW05VjUxaVpkZnpQYmxRZGYyNDhCT201V2pidmx3R21iUzh5UjRLSHU4My9SWktyam5NbVhVa3VHTTFJMGNTREJmemsxYXNqVVpBVFZhaisrakxGdVZnYlpWZWFvd1pNU1R4MWtQYURQWmc4VHUyVDF1YWdyMEVHcit2V0oxakVkRGFFVEVjMWRkbmltMlZRRC9rUWZXNXgyaVdQMk9qMzhxRnQzeWZveTk0b05WZ3pwN3VvWVlVYnBuOUlOYWNua3NwSHJYYXViMFByK2M4K2FIYlNWMHBwQlVGdWFyKzRtOHlwY29YYmFIeTBCZkZ6R05HN20vUTMycXFJUENSdG80S09mbVdOeWhsd2o3THlGUT09IiwibWFjIjoiMGY5MTMzZWNiOGQ3OTlmNjBhNDE0MmFmZjRiMmRhMWMwNDIxMmVlMTVjMjg5YmM5Y2JjM2NlODMwYmE4NjdlNSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
+                                    "value": "XSRF-TOKEN=eyJpdiI6IktybjNLc2VNSUltSm9IQ0tHN29LN1E9PSIsInZhbHVlIjoiSXRObzl2bUNMdDRBSVJwNC8xYzlMVmxMTm1kSUFvTXpvY3VBU1ZQWGhkRjJTeWlGYXU2dmhneWJtWnFiQmtyVU5qa3lIQUVHNGt6bzJrYlhqZmtwUFFOUE9POStNNWNDZUJWdzlRdGNGV00xbEtxMGt0MGQzZklNeHNmNDJqSEwiLCJtYWMiOiI0NmYxZTliYmYxZjg4MDU2NGNmM2I0ZmJkZGY3MmVhNWY0YjUxMzEzZDg3NjVlNzAyZTNhMzZkODQ2N2M5NDg0IiwidGFnIjoiIn0%3D; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=\/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik1VWTRrVlExVkorQmZ1SDU0TGFNQ1E9PSIsInZhbHVlIjoickR2cWN0VDRIY1JuR3owbndvSnpaRUJLQnBTanNTSU50cWhKcHRkV1c1djk3b1doN3RrM2RhRmY0RmNCTjNhYmExSmhTdGYzczM0VmZENjV5bHg2STMrMFU4dlJONDVFMTlwbDBNekFLWWVvNXQrdXhya1VHUFo3c01pQU0yanMiLCJtYWMiOiI0ZTZjOWM4N2Q0YzY4MTllZjQwYTU1MWJlMzdhOTRlNjQxMGU0NmE2NzAzM2NkZjZjYzk4NGQ0Y2ZjYTlmNTUxIiwidGFnIjoiIn0%3D; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax; zcHxi0FziwhszYCOLmiKBolo92fHqLFwXnpflWSH=eyJpdiI6IkRWd3JDSDl6SjJWQmVOSnRHN3BseGc9PSIsInZhbHVlIjoibXFmMXpYT1F2bWU2eVVvWUR0cHVEY3RtOVFZQ0JhcGI4TUNSaXBiSEZQb0NSOUlZY21NOGM2TjNoWWNCTU51YWdYNGZid0pMWTI5VmF5MlJHQjVRM01kUUk5a0ZydHpBODhMaERvT2c3UnY3WHJoQkZkV0ZuRFkweGtJZ0xKZUpHSnl1MHM3S0Q4NzdOSmZucUxTOXVmcmd1YjZaVmZldHYweVllempId3VibzRNWHRLY0hjelNqYUt1TjV3QjFjNTA5cmZLbzBtMnVKeFp6SHh4dDlYNXB3eWNiREpHOGMrSWxsd1A3WHg5c1hMVWpVMkV2SEpHL3BlcEtobzA5NkhkazAxMTVmRFZCck56SGdnRVJjcnhieW5yZFFnN2tEV0ZmVFFvNURaT0gxNHJ5S1AwekVuODlrNGF3ajc3NHlYZFVydW05cERxUUgwNFZEVXUyYkNrUlhzTVRhRFkxNytrVyt2SXpVdk0vM0tMRHhzU2RYU1pCdVhRYUFkMWtYak1OV3Z3MXVCN1VWYnVnazVqcWJ0QT09IiwibWFjIjoiNmQzMTY2Mzg0ZjBmYjhjZjZmYjQ2ODE3NzQ5NDM5OWYzMmQyNDM5NzViZmVlMDk2Njg3YjM0MDAyY2M3ODJkMiIsInRhZyI6IiJ9; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=\/; domain=localhost; httponly; samesite=lax"
                                 }
                             ],
                             "code": 204,
@@ -412,7 +412,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"quis\"}"
+                            "raw": "{\"name\":\"atque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -511,7 +511,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"voluptatum\"}"
+                            "raw": "{\"name\":\"qui\"}"
                         },
                         "description": "",
                         "auth": {
@@ -630,7 +630,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"idnhfkffhubkalce\",\"merk\":\"yardufokakghrtuppbouqhkl\",\"unit\":\"lnvpvrpfjoooouht\",\"stock\":11,\"min_stock\":2,\"category_id\":7,\"price\":15}"
+                            "raw": "{\"name\":\"gx\",\"merk\":\"zdubyxkjpdqesvxxy\",\"unit\":\"hecewoupl\",\"stock\":19,\"min_stock\":13,\"category_id\":6,\"price\":15}"
                         },
                         "description": "",
                         "auth": {
@@ -729,7 +729,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fyitxpxzqe\",\"merk\":\"dgjnvauzzpshqubonvvr\",\"unit\":\"hdszxwbxlmh\",\"stock\":7,\"min_stock\":1,\"category_id\":7,\"price\":6}"
+                            "raw": "{\"name\":\"pzhxkkdpdnrcvpwqq\",\"merk\":\"lqelsoruaoxzreprqqevlhxem\",\"unit\":\"sseh\",\"stock\":15,\"min_stock\":19,\"category_id\":20,\"price\":20}"
                         },
                         "description": "",
                         "auth": {
@@ -752,6 +752,1610 @@
                                     "key": "id",
                                     "value": "1",
                                     "description": "The ID of the item."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"supplier_id\":5,\"items\":[{\"item_id\":4,\"qty\":5}]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:item_in_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "item_in_id",
+                                    "key": "item_in_id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:item_in_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "item_in_id",
+                                    "key": "item_in_id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":8,\"qty\":16}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:item_in_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "item_in_id",
+                                    "key": "item_in_id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":7,\"qty\":11}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-in\/:item_in_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "item_in_id",
+                                    "key": "item_in_id",
+                                    "value": "1",
+                                    "description": "The ID of the item in."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"division_id\":3,\"items\":[{\"item_id\":18,\"qty\":7}]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:item_out_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "item_out_id",
+                                    "key": "item_out_id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:item_out_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "item_out_id",
+                                    "key": "item_out_id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":11,\"qty\":19}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:item_out_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "item_out_id",
+                                    "key": "item_out_id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "id",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":12,\"qty\":20}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "item-out\/:item_out_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "item_out_id",
+                                    "key": "item_out_id",
+                                    "value": "1",
+                                    "description": "The ID of the item out."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST submission\/{submission_id}\/accept",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/accept",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/accept",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST submission\/{submission_id}\/decline",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/decline",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/decline",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"items\":[{\"item_id\":14,\"qty\":3}]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":\"quos\",\"qty\":\"et\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "nulla",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":5,\"qty\":2,\"qty_acc\":6}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "submission\/:submission_id\/detail\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "variable": [
+                                {
+                                    "id": "submission_id",
+                                    "key": "submission_id",
+                                    "value": "1",
+                                    "description": "The ID of the submission."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the detail."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST request\/{request}\/accept",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request\/:request\/accept",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request\/:request\/accept",
+                            "variable": [
+                                {
+                                    "id": "request",
+                                    "key": "request",
+                                    "value": "fugiat",
+                                    "description": "The request."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST request\/{request}\/decline",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request\/:request\/decline",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request\/:request\/decline",
+                            "variable": [
+                                {
+                                    "id": "request",
+                                    "key": "request",
+                                    "value": "natus",
+                                    "description": "The request."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"items\":[{\"item_id\":13,\"qty\":6}]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:request_item_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Not Authorized\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:request_item_id\/detail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "variable": [
+                                {
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":\"aut\",\"qty\":\"aliquam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "variable": [
+                                {
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                },
+                                {
+                                    "id": "requestItemDetail",
+                                    "key": "requestItemDetail",
+                                    "value": "vitae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"item_id\":13,\"qty\":5,\"qty_acc\":7}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "variable": [
+                                {
+                                    "id": "request_item_id",
+                                    "key": "request_item_id",
+                                    "value": "1",
+                                    "description": "The ID of the request item."
+                                },
+                                {
+                                    "id": "requestItemDetail_id",
+                                    "key": "requestItemDetail_id",
+                                    "value": "1",
+                                    "description": "The ID of the requestItemDetail."
                                 }
                             ]
                         },

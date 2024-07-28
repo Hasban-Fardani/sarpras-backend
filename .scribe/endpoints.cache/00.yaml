@@ -34,7 +34,7 @@ endpoints:
           cache-control: 'no-cache, private'
           access-control-allow-origin: 'http://localhost:3000'
           access-control-allow-credentials: 'true'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImF3UnB0UURYMGh2ZTFLVlNLdS9xbnc9PSIsInZhbHVlIjoiMGNqZmlxZUJGL2xQcHAveWRNc2dTb0V5U3I1dHRveWdqNmlmRWxYWmNUdjdkYVNQZHUxUGlpZk0zcm9BTFhubWszc1cwMkU5L25JK0VIYTBkZTRlN3N1bjhxczRORkpob245ZGpLNmNUTCtiSGwwMHdPdFpvZS9VNGNSRlhwTFkiLCJtYWMiOiI4NTA5ZDZmMGI2MTMyNmU5Y2E1Yjg1MmI2MDE2NmYwNTM4YTA1ODI4YTc3NjdlZjQyM2Y3ODk0NjQzMWQyYzU2IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6InNFNXJZbkJFUlYzaEF5RVZTQlFiSnc9PSIsInZhbHVlIjoieFJVdlo5RmwrUElheWpRcnNKU0xNakQ4N2kxYnd5djNrSkltQnhKN3dXQmF3UWhpcCt1YlBzS2F5MDBKSlYvZ1ZrZVBtR1JYK2tUUjd0bkp0QXdFaVBZMFVWeFFzcVQxT3Q4N2tDa2lmOTg5TElxS0JNVU83UXB4azN2d3BlcWQiLCJtYWMiOiJmYmMxNjQzYThjOTg0MjE5NzAyMThiY2Y3ZTE3YjhhMzc2YjdmN2U4MGM5YTVhYjU1ZWUyZGEzYWQyZWY5MTc5IiwidGFnIjoiIn0%3D; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; ejksO7DhlzryHngdllD0DBdPDBgGzGG6mvygIHOZ=eyJpdiI6ImQ1KytKeWY0Z3ZEZFJpNVBaSHV1aVE9PSIsInZhbHVlIjoid2lmd29oRkF6OUI3U095eWVDUkpNdDdjNy95NG9sYTBnUTlIelg1VURuc2V2WCtVN2dsY0hLbzRicDN1WHNDVTFUUmhmRDk2VVlCSXFzODlUdGNGYThyNSs5aEs0T0V2SW14U2FYUU1IVXlQb0szOTk5MHdFaTkxNGYra2VKWDN2RU1KYW05VjUxaVpkZnpQYmxRZGYyNDhCT201V2pidmx3R21iUzh5UjRLSHU4My9SWktyam5NbVhVa3VHTTFJMGNTREJmemsxYXNqVVpBVFZhaisrakxGdVZnYlpWZWFvd1pNU1R4MWtQYURQWmc4VHUyVDF1YWdyMEVHcit2V0oxakVkRGFFVEVjMWRkbmltMlZRRC9rUWZXNXgyaVdQMk9qMzhxRnQzeWZveTk0b05WZ3pwN3VvWVlVYnBuOUlOYWNua3NwSHJYYXViMFByK2M4K2FIYlNWMHBwQlVGdWFyKzRtOHlwY29YYmFIeTBCZkZ6R05HN20vUTMycXFJUENSdG80S09mbVdOeWhsd2o3THlGUT09IiwibWFjIjoiMGY5MTMzZWNiOGQ3OTlmNjBhNDE0MmFmZjRiMmRhMWMwNDIxMmVlMTVjMjg5YmM5Y2JjM2NlODMwYmE4NjdlNSIsInRhZyI6IiJ9; expires=Tue, 23 Jul 2024 09:01:47 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IktybjNLc2VNSUltSm9IQ0tHN29LN1E9PSIsInZhbHVlIjoiSXRObzl2bUNMdDRBSVJwNC8xYzlMVmxMTm1kSUFvTXpvY3VBU1ZQWGhkRjJTeWlGYXU2dmhneWJtWnFiQmtyVU5qa3lIQUVHNGt6bzJrYlhqZmtwUFFOUE9POStNNWNDZUJWdzlRdGNGV00xbEtxMGt0MGQzZklNeHNmNDJqSEwiLCJtYWMiOiI0NmYxZTliYmYxZjg4MDU2NGNmM2I0ZmJkZGY3MmVhNWY0YjUxMzEzZDg3NjVlNzAyZTNhMzZkODQ2N2M5NDg0IiwidGFnIjoiIn0%3D; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=/; domain=localhost; samesite=lax; laravel_session=eyJpdiI6Ik1VWTRrVlExVkorQmZ1SDU0TGFNQ1E9PSIsInZhbHVlIjoickR2cWN0VDRIY1JuR3owbndvSnpaRUJLQnBTanNTSU50cWhKcHRkV1c1djk3b1doN3RrM2RhRmY0RmNCTjNhYmExSmhTdGYzczM0VmZENjV5bHg2STMrMFU4dlJONDVFMTlwbDBNekFLWWVvNXQrdXhya1VHUFo3c01pQU0yanMiLCJtYWMiOiI0ZTZjOWM4N2Q0YzY4MTllZjQwYTU1MWJlMzdhOTRlNjQxMGU0NmE2NzAzM2NkZjZjYzk4NGQ0Y2ZjYTlmNTUxIiwidGFnIjoiIn0%3D; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax; zcHxi0FziwhszYCOLmiKBolo92fHqLFwXnpflWSH=eyJpdiI6IkRWd3JDSDl6SjJWQmVOSnRHN3BseGc9PSIsInZhbHVlIjoibXFmMXpYT1F2bWU2eVVvWUR0cHVEY3RtOVFZQ0JhcGI4TUNSaXBiSEZQb0NSOUlZY21NOGM2TjNoWWNCTU51YWdYNGZid0pMWTI5VmF5MlJHQjVRM01kUUk5a0ZydHpBODhMaERvT2c3UnY3WHJoQkZkV0ZuRFkweGtJZ0xKZUpHSnl1MHM3S0Q4NzdOSmZucUxTOXVmcmd1YjZaVmZldHYweVllempId3VibzRNWHRLY0hjelNqYUt1TjV3QjFjNTA5cmZLbzBtMnVKeFp6SHh4dDlYNXB3eWNiREpHOGMrSWxsd1A3WHg5c1hMVWpVMkV2SEpHL3BlcEtobzA5NkhkazAxMTVmRFZCck56SGdnRVJjcnhieW5yZFFnN2tEV0ZmVFFvNURaT0gxNHJ5S1AwekVuODlrNGF3ajc3NHlYZFVydW05cERxUUgwNFZEVXUyYkNrUlhzTVRhRFkxNytrVyt2SXpVdk0vM0tMRHhzU2RYU1pCdVhRYUFkMWtYak1OV3Z3MXVCN1VWYnVnazVqcWJ0QT09IiwibWFjIjoiNmQzMTY2Mzg0ZjBmYjhjZjZmYjQ2ODE3NzQ5NDM5OWYzMmQyNDM5NzViZmVlMDk2Njg3YjM0MDAyY2M3ODJkMiIsInRhZyI6IiJ9; expires=Sun, 28 Jul 2024 04:04:54 GMT; Max-Age=7200; path=/; domain=localhost; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -348,13 +348,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: quis
+        example: atque
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: quis
+      name: atque
     fileParameters: []
     responses: []
     responseFields: []
@@ -449,13 +449,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: voluptatum
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: voluptatum
+      name: qui
     fileParameters: []
     responses: []
     responseFields: []
@@ -569,7 +569,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: idnhfkffhubkalce
+        example: gx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -578,7 +578,7 @@ endpoints:
         name: merk
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: yardufokakghrtuppbouqhkl
+        example: zdubyxkjpdqesvxxy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -587,7 +587,7 @@ endpoints:
         name: unit
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: lnvpvrpfjoooouht
+        example: hecewoupl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -596,7 +596,7 @@ endpoints:
         name: stock
         description: satuan.
         required: true
-        example: 11
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -605,7 +605,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 2
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -614,7 +614,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: 7
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -629,12 +629,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: idnhfkffhubkalce
-      merk: yardufokakghrtuppbouqhkl
-      unit: lnvpvrpfjoooouht
-      stock: 11
-      min_stock: 2
-      category_id: 7
+      name: gx
+      merk: zdubyxkjpdqesvxxy
+      unit: hecewoupl
+      stock: 19
+      min_stock: 13
+      category_id: 6
       price: 15
     fileParameters: []
     responses: []
@@ -730,7 +730,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: fyitxpxzqe
+        example: pzhxkkdpdnrcvpwqq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -739,7 +739,7 @@ endpoints:
         name: merk
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: dgjnvauzzpshqubonvvr
+        example: lqelsoruaoxzreprqqevlhxem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -748,7 +748,7 @@ endpoints:
         name: unit
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hdszxwbxlmh
+        example: sseh
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -757,7 +757,7 @@ endpoints:
         name: stock
         description: satuan.
         required: true
-        example: 7
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -766,7 +766,7 @@ endpoints:
         name: min_stock
         description: ''
         required: true
-        example: 1
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -775,7 +775,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: 7
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -784,19 +784,19 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 6
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: fyitxpxzqe
-      merk: dgjnvauzzpshqubonvvr
-      unit: hdszxwbxlmh
-      stock: 7
-      min_stock: 1
-      category_id: 7
-      price: 6
+      name: pzhxkkdpdnrcvpwqq
+      merk: lqelsoruaoxzreprqqevlhxem
+      unit: sseh
+      stock: 15
+      min_stock: 19
+      category_id: 20
+      price: 20
     fileParameters: []
     responses: []
     responseFields: []
@@ -833,6 +833,1898 @@ endpoints:
         custom: []
     cleanUrlParameters:
       id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: item-in
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: item-in
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      supplier_id:
+        name: supplier_id
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
+        description: ''
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].qty':
+        name: 'items[].qty'
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      supplier_id: 5
+      items:
+        -
+          item_id: 4
+          qty: 5
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'item-in/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'item-in/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'item-in/{item_in_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_in_id:
+        name: item_in_id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_in_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'item-in/{item_in_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_in_id:
+        name: item_in_id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_in_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 8
+      qty: 16
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'item-in/{item_in_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_in_id:
+        name: item_in_id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_in_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: false
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: false
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 7
+      qty: 11
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'item-in/{item_in_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_in_id:
+        name: item_in_id
+        description: 'The ID of the item in.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_in_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: item-out
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: item-out
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      division_id:
+        name: division_id
+        description: ''
+        required: true
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
+        description: ''
+        required: true
+        example: 18
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].qty':
+        name: 'items[].qty'
+        description: ''
+        required: true
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      division_id: 3
+      items:
+        -
+          item_id: 18
+          qty: 7
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'item-out/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'item-out/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'item-out/{item_out_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_out_id:
+        name: item_out_id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_out_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'item-out/{item_out_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_out_id:
+        name: item_out_id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_out_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 11
+      qty: 19
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'item-out/{item_out_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_out_id:
+        name: item_out_id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: id
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_out_id: 1
+      id: id
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: false
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: false
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 12
+      qty: 20
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'item-out/{item_out_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      item_out_id:
+        name: item_out_id
+        description: 'The ID of the item out.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      item_out_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'submission/{submission_id}/accept'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'submission/{submission_id}/decline'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: submission
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: submission
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
+        description: ''
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].qty':
+        name: 'items[].qty'
+        description: ''
+        required: true
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      items:
+        -
+          item_id: 14
+          qty: 3
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'submission/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'submission/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'submission/{submission_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'submission/{submission_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: quos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: quos
+      qty: et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'submission/{submission_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: nulla
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+      id: nulla
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty_acc:
+        name: qty_acc
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 5
+      qty: 2
+      qty_acc: 6
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'submission/{submission_id}/detail/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      submission_id:
+        name: submission_id
+        description: 'The ID of the submission.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the detail.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      submission_id: 1
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'request/{request}/accept'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request:
+        name: request
+        description: 'The request.'
+        required: true
+        example: fugiat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request: fugiat
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'request/{request}/decline'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request:
+        name: request
+        description: 'The request.'
+        required: true
+        example: natus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request: natus
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: request-item
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: request-item
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      items:
+        name: items
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].item_id':
+        name: 'items[].item_id'
+        description: ''
+        required: true
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'items[].qty':
+        name: 'items[].qty'
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      items:
+        -
+          item_id: 13
+          qty: 6
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'request-item/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'request-item/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'request-item/{request_item_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request_item_id:
+        name: request_item_id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request_item_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Not Authorized"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'request-item/{request_item_id}/detail'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request_item_id:
+        name: request_item_id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request_item_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: aliquam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: aut
+      qty: aliquam
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'request-item/{request_item_id}/detail/{requestItemDetail}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request_item_id:
+        name: request_item_id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      requestItemDetail:
+        name: requestItemDetail
+        description: ''
+        required: true
+        example: vitae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request_item_id: 1
+      requestItemDetail: vitae
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      item_id:
+        name: item_id
+        description: ''
+        required: true
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      qty_acc:
+        name: qty_acc
+        description: ''
+        required: true
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      item_id: 13
+      qty: 5
+      qty_acc: 7
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'request-item/{request_item_id}/detail/{requestItemDetail_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      request_item_id:
+        name: request_item_id
+        description: 'The ID of the request item.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      requestItemDetail_id:
+        name: requestItemDetail_id
+        description: 'The ID of the requestItemDetail.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      request_item_id: 1
+      requestItemDetail_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
