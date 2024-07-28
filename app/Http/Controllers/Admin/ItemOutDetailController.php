@@ -14,11 +14,15 @@ class ItemOutDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(ItemOut $itemOut)
+    public function index(Request $request, ItemOut $itemOut)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        $itemOutDetails = $itemOut->details()->paginate($perPage, ['*'], 'page', $page);
         return response()->json([
             'message' => 'success get item out detail',
-            'data' => $itemOut->details
+            ...$itemOutDetails->toArray()
         ]);
     }
 

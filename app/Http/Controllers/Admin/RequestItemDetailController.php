@@ -13,11 +13,15 @@ class RequestItemDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(RequestItem $requestItem)
+    public function index(Request $request, RequestItem $requestItem)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        $requestItemDetails = $requestItem->details()->paginate($perPage, ['*'], 'page', $page);
         return response()->json([
             'message' => 'success get all request item details',
-            'data' => $requestItem->details
+            ...$requestItemDetails->toArray()
         ]);
     }
 

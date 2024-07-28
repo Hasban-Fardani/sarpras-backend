@@ -14,6 +14,9 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
         $data = Item::with('category:id,name');
 
         // search by name
@@ -28,11 +31,11 @@ class ItemController extends Controller
             $data->where('category_id', $request->category_id);
         });
 
-        $data = $data->get();
+        $data = $data->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json([
             'message' => 'success get all items',
-            'data' => $data
+            ...$data->toArray()
         ]);
     }
 

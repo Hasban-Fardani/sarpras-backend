@@ -40,7 +40,7 @@ class ItemInController extends Controller
 
         return response()->json([
             'message' => 'success get all item-ins',
-            'data' => $data
+            ...$data->toArray()
         ]);
     }
 

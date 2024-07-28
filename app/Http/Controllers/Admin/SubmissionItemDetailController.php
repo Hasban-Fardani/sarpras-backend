@@ -13,11 +13,15 @@ class SubmissionItemDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(SubmissionItem $submission)
+    public function index(Request $request, SubmissionItem $submission)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        $submissionItemDetails = $submission->details()->paginate($perPage, ['*'], 'page', $page);
         return response()->json([
             'message' => 'success get all submission item details',
-            'data' => $submission->details
+            ...$submissionItemDetails->toArray()
         ]);
     }
 
