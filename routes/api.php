@@ -7,10 +7,13 @@ use App\Http\Controllers\Admin\ItemInController;
 use App\Http\Controllers\Admin\ItemInDetailController;
 use App\Http\Controllers\Admin\ItemOutController;
 use App\Http\Controllers\Admin\ItemOutDetailController;
+use App\Http\Controllers\Admin\RequestItemController;
+use App\Http\Controllers\Admin\RequestItemDetailController;
 use App\Http\Controllers\Admin\SubmissionItemController;
 use App\Http\Controllers\Admin\SubmissionItemDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Supervisor\RequestCheckController;
 use App\Http\Controllers\Supervisor\SubmissionCheckController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
@@ -58,4 +61,12 @@ Route::middleware('auth:sanctum')->group(function () {
         ->except('update');
     Route::apiResource('submission.detail', SubmissionItemDetailController::class)
         ->except('show');
+
+    Route::post('/request/{request}/accept', [RequestCheckController::class, 'accept']);
+    Route::post('/request/{request}/decline', [RequestCheckController::class, 'decline']);
+    Route::apiResource('request-item', RequestItemController::class)
+        ->except('update');
+    Route::apiResource('request-item.detail', RequestItemDetailController::class)
+        ->except('show')
+        ->parameter('detail', 'requestItemDetail');
 });
