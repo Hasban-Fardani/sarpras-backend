@@ -14,11 +14,15 @@ class ItemInDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(ItemIn $itemIn)
+    public function index(Request $request, ItemIn $itemIn)
     {
+        $page = $request->input('page', 1);
+        $perPage = $request->input('per_page', 10);
+
+        $itemInDetails = $itemIn->details()->paginate($perPage, ['*'], 'page', $page);
         return response()->json([
             'message' => 'success get item in detail',
-            'data' => $itemIn->details
+            ...$itemInDetails->toArray()
         ]);
     }
 
