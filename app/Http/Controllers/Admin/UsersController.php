@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -33,26 +34,9 @@ class UsersController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        // validate request
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'nip' => 'required|string|max:255|unique:users',
-            'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
-            'role' => 'required|in:admin,unit,pengawas',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        $user = User::create($validator->validated());
+        $user = User::create($request->validated());
         return response()->json([
             'message' => 'success create user',
             'data' => $user
@@ -73,26 +57,9 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
-        // validate request
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'nip' => 'required|string|max:255|unique:users,nip,' . $user->id,
-            'username' => 'required|string|max:255|unique:users,username,' . $user->id,
-            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
-            'password' => 'required|string|min:6',
-            'role' => 'required|in:admin,unit,pengawas',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        $user = $user->update($validator->validated());
+        $user = $user->update($request->validated());
         return response()->json([
             'message' => 'success create user',
             'data' => $user

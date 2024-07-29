@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ItemRequest;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -42,27 +43,9 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ItemRequest $request)
     {
-        // validate
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'merk' => 'required|string|max:255',
-            'unit' => 'required|string|max:255',  // satuan
-            'stock' => 'required|integer',
-            'min_stock' => 'required|integer',
-            'category_id' => 'required|integer',
-            'price' => 'required|integer',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        $data = $validator->validated();
+        $data = $request->validated();
         $hashes = hash('sha256', now() . $data['name']);
         $data['code'] = substr($hashes, 0, 10);
         $item = Item::create($data);
@@ -87,28 +70,10 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Item $item)
+    public function update(ItemRequest $request, Item $item)
     {
-        // validate
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'merk' => 'required|string|max:255',
-            'unit' => 'required|string|max:255',  // satuan
-            'stock' => 'required|integer',
-            'min_stock' => 'required|integer',
-            'category_id' => 'required|integer',
-            'price' => 'required|integer',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
         // update item
-        $data = $validator->validated();
+        $data = $request->validated();
         $item->update($data);
 
         return response()->json([

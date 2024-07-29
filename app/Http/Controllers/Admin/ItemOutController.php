@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ItemOutRequest;
 use App\Models\ItemOut;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -52,26 +53,10 @@ class ItemOutController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ItemOutRequest $request)
     {
-        // validate
-        $validator = Validator::make($request->all(), [
-            'division_id' => 'required|integer',
-            'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
-            'items.*.qty' => 'required|integer',
-        ]);
-
-        // check if validation fails
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
         // get validated data
-        $validatedData = $validator->validated();
+        $validatedData = $request->validated();
 
         // directly create a new array with only the needed keys
         $data = [
