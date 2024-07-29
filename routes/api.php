@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\RequestItemDetailController;
 use App\Http\Controllers\Admin\SubmissionItemController;
 use App\Http\Controllers\Admin\SubmissionItemDetailController;
 use App\Http\Controllers\Admin\SupplierController;
+use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Supervisor\RequestCheckController;
@@ -41,6 +42,8 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('/stats/item', [DashboardController::class, 'getStatsItem']);
         }); 
     });
+
+    Route::apiResource('users', UsersController::class);
 
     Route::apiResource('category', CategoryController::class);
 
