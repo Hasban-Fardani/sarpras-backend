@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SubmissionItemAdminRequest;
 use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -45,24 +46,9 @@ class SubmissionItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SubmissionItemAdminRequest $request)
     {
-        // validate request
-        $validator = Validator::make($request->all(), [
-            'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
-            'items.*.qty' => 'required|integer',
-        ]);
-
-        // check if validation fails
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        $validatedData = $validator->validated();
+        $validatedData = $request->validated();
         // directly create a new array with only the needed keys
         $data = [
             'user_id' => auth()->user()->id,

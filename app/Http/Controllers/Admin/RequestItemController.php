@@ -47,22 +47,7 @@ class RequestItemController extends Controller
      */
     public function store(Request $request)
     {
-        // validate request
-        $validator = Validator::make($request->all(), [
-            'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
-            'items.*.qty' => 'required|integer',
-        ]);
-
-        // check if validation fails
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        $validatedData = $validator->validated();
+        $validatedData = $request->validated();
         // directly create a new array with only the needed keys
         $data = [
             'user_id' => auth()->user()->id,

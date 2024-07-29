@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class RequestCheckController extends Controller
 {
+    public function __construct()
+    {
+        if (!auth()->user()->can('pengawas')){
+            abort(response()->json([
+                'message' => 'unauthorized access',
+            ], 403));
+        }
+    }
     /**
      * 
      */

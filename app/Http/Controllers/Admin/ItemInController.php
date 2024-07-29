@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ItemInRequest;
 use App\Models\ItemIn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
 class ItemInController extends Controller
 {
@@ -47,26 +47,10 @@ class ItemInController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ItemInRequest $request)
     {
-        // validate
-        $validator = Validator::make($request->all(), [
-            'supplier_id' => 'required|integer',
-            'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
-            'items.*.qty' => 'required|integer',
-        ]);
-
-        // check if validation fails
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'invalid fields',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-
-        // get validated data
-        $validatedData = $validator->validated();
+       // get validated data
+        $validatedData = $request->validated();
 
         // directly create a new array with only the needed keys
         $data = [
