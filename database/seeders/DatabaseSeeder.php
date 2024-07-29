@@ -30,21 +30,24 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@example',
             'nip' => 10232131,
-            'name' => 'admin 1'
+            'name' => 'admin 1',
+            'role' => 'admin'
         ]);
         
         User::factory()->create([
             'email' => 'rpl@example',
             'username' => 'unit',
             'nip' => 10232132,
-            'name' => 'unit RPL'
+            'name' => 'unit RPL',
+            'role' => 'unit'
         ]);
 
         User::factory()->create([
             'email' => 'pengawas@example',
             'username' => 'pengawas',
             'nip' => 10232133,
-            'name' => 'Pak Hendro'
+            'name' => 'Pak Hendro',
+            'role' => 'pengawas'
         ]);
 
         Category::factory(10)->create();

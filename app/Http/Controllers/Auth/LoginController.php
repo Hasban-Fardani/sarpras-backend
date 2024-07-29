@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
@@ -37,6 +38,7 @@ class LoginController extends Controller
         }
 
         $user = auth()->user();
+        Log::info("logged in user: {$user}");
         $token = $user->createToken('accessToken')->plainTextToken;
         return response()->json([
             'message' => 'login success',
