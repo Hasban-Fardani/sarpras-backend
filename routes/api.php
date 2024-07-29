@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\RequestItemController;
 use App\Http\Controllers\Admin\RequestItemDetailController;
 use App\Http\Controllers\Admin\SubmissionItemController;
 use App\Http\Controllers\Admin\SubmissionItemDetailController;
+use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Supervisor\RequestCheckController;
@@ -44,6 +45,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('category', CategoryController::class);
 
     Route::apiResource('item', ItemController::class);
+
+    Route::apiResource('supplier', SupplierController::class);
 
     Route::apiResource('item-in', ItemInController::class)
         ->except('update');
