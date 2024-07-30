@@ -7,15 +7,15 @@
     "rewrites": [
         {
             "source": "/docs",
-            "dest": "/public/docs/index.html"
+            "destination": "/public/docs/index.html"
         },
         {
             "source": "/docs/(.*)",
-            "dest": "/public/docs/$1"
+            "destination": "/public/docs/$1"
         },
         {
             "source": "/(.*)",
-            "dest": "/api/index.php"
+            "destination": "/api/index.php"
         }
     ],
     "env": {
