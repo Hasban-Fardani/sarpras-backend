@@ -21,7 +21,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourprojectdomain.com",
+        "APP_URL": "https://sarpras-backend.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -29,6 +29,8 @@
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
+
+        "FRONTEND_URL": "https://sarpras-sebelas.vercel.app/",
 
         "MYSQL_ATTR_SSL_CA": "/var/task/user/isrgrootx1.pem",
 
