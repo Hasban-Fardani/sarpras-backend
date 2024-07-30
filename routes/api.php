@@ -30,6 +30,9 @@ Route::get('/', function () {
 Route::prefix('/auth')->group(function () {
     Route::post('/login', LoginController::class);
     Route::middleware('auth:sanctum')->post('/logout', LogoutController::class);
+    Route::get('/check', function () {
+        return auth()->check();
+    })->middleware('auth:sanctum');
 });
 
 Route::middleware('auth:sanctum')->group(function () {

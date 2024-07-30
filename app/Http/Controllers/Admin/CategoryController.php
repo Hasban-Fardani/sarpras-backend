@@ -18,7 +18,7 @@ class CategoryController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all categories
-        $data = Category::all();
+        $data = Category::query();
 
         // search by name
         $data->when($request->search, function ($data) use ($request) {
