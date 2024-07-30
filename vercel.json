@@ -30,6 +30,8 @@
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
 
+        "DB_CONNECTION":"mysql",
+
         "FRONTEND_URL": "https://sarpras-sebelas.vercel.app/",
 
         "MYSQL_ATTR_SSL_CA": "/var/task/user/isrgrootx1.pem",
