@@ -4,17 +4,17 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
-    "routes": [
+    "rewrites": [
         {
-            "src": "/docs",
+            "source": "/docs",
             "dest": "/public/docs/index.html"
         },
         {
-            "src": "/docs/(.*)",
+            "source": "/docs/(.*)",
             "dest": "/public/docs/$1"
         },
         {
-            "src": "/(.*)",
+            "source": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
