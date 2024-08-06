@@ -17,9 +17,10 @@ class ItemOutFactory extends Factory
     public function definition(): array
     {
         return [
-            'operator_id' => fake()->numberBetween(1, 10),
-            'division_id' => fake()->numberBetween(1, 10),
+            'operator_id' => fake()->numberBetween(1, 3),
+            'division_id' => fake()->numberBetween(1, 3),
             'total_items' => fake()->numberBetween(1, 100),
+            'note' => fake()->sentence(),
         ];
     }
 }

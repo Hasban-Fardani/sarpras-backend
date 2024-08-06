@@ -18,7 +18,7 @@ class SupplierController extends Controller
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
         
-        $suppliers = Supplier::all();
+        $suppliers = Supplier::query();
         $suppliers->when($request->input('search'), function ($query) use ($request) {
             $query->where('name', 'like', '%' . $request->input('search') . '%');
         });

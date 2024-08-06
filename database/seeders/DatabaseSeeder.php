@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Employee;
 use App\Models\Item;
 use App\Models\ItemIn;
 use App\Models\ItemInDetail;
@@ -24,30 +25,48 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        Employee::factory()->create([
+            'nip' => 111111111,
+            'name' => 'Pak Toni',
+            'position' => 'admin',
+            'phone' => '081234567890',
+            'email' => 'admin@example.com',
+        ]);
+
+        Employee::factory()->create([
+            'nip' => 222222222,
+            'name' => 'Pak Sutarsa',
+            'position' => 'pengawas',
+            'phone' => '081234567891',
+            'email' => 'pengawas@example.com',
+        ]);
+
+        Employee::factory()->create([
+            'nip' => 333333333,
+            'name' => 'Bu Ani',
+            'position' => 'unit kerja',
+            'phone' => '081234567892',
+            'email' => 'unit@example.com',
+        ]);
+
+        Employee::factory(10)->create();
 
         User::factory()->create([
+            'nip' => 111111111,
             'username' => 'admin',
-            'email' => 'admin@example',
-            'nip' => 10232131,
-            'name' => 'admin 1',
             'role' => 'admin'
         ]);
         
         User::factory()->create([
-            'email' => 'rpl@example',
-            'username' => 'unit',
-            'nip' => 10232132,
-            'name' => 'unit RPL',
-            'role' => 'unit'
+            'nip' => 222222222,
+            'username' => 'pengawas',
+            'role' => 'pengawas'
         ]);
 
         User::factory()->create([
-            'email' => 'pengawas@example',
-            'username' => 'pengawas',
-            'nip' => 10232133,
-            'name' => 'Pak Hendro',
-            'role' => 'pengawas'
+            'nip' => 333333333,
+            'username' => 'unit_rpl',
+            'role' => 'unit'
         ]);
 
         Category::factory(10)->create();

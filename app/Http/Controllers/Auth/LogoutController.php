@@ -9,7 +9,9 @@ class LogoutController extends Controller
 {
     public function __invoke(Request $request)
     {
+        // delete current user token
         auth()->user()->currentAccessToken()->delete();
+
         return response()->json([
             'message' => 'logged out'
         ]);

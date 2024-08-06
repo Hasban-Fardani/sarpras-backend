@@ -18,8 +18,9 @@ class ItemInFactory extends Factory
     {
         return [
             'supplier_id' => fake()->numberBetween(1, 10),
-            'user_id' => fake()->numberBetween(1, 10),
+            'employee_id' => fake()->numberBetween(1, 10),
             'total_items' => fake()->numberBetween(1, 100),
+            'note' => fake()->sentence(),
         ];
     }
 }

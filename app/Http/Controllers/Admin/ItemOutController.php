@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemOutRequest;
+use App\Models\Employee;
 use App\Models\ItemOut;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
 class ItemOutController extends Controller
 {
@@ -25,16 +25,16 @@ class ItemOutController extends Controller
         // search by operator or division name
         $data->when($request->search, function ($data) use ($request) {
             $searchTerm = '%' . $request->search . '%';
-        
+
             $data->where(function ($query) use ($searchTerm) {
                 $query->whereHas('operator', function ($query) use ($searchTerm) {
                     $query->where('name', 'like', $searchTerm);
                 })
-                ->orWhereHas('division', function ($query) use ($searchTerm) {
-                    $query->where('name', 'like', $searchTerm);
-                });
+                    ->orWhereHas('division', function ($query) use ($searchTerm) {
+                        $query->where('name', 'like', $searchTerm);
+                    });
             });
-        });        
+        });
 
         // filter by division
         $data->when($request->division_id, function ($data) use ($request) {
@@ -58,9 +58,12 @@ class ItemOutController extends Controller
         // get validated data
         $validatedData = $request->validated();
 
+        $userNIP = auth()->user()->nip;
+        $employeeID = Employee::where('nip', $userNIP)->first()->id;
+        
         // directly create a new array with only the needed keys
         $data = [
-            'operator_id' => auth()->user()->id,
+            'operator_id' => $employeeID,
             'division_id' => $validatedData['division_id'],
             'total_items' => count($validatedData['items']),
         ];
@@ -71,16 +74,27 @@ class ItemOutController extends Controller
         // update stock
         $item_ids = array_column($validatedData['items'], 'item_id');
         $qtys = array_column($validatedData['items'], 'qty');
-        // get last item stock
-        
-        // Create the SQL query dynamically
-        $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
 
-        // Execute the SQL query
-        DB::statement($sql);
+        if (empty($item_ids)) {
+            // Handle the case when there are no items
+            return response()->json([
+                'message' => 'success create item-out',
+                'data' => $itemOut
+            ]);
+        }
+
+        // Prepare the SQL query
+        $placeholders = implode(',', array_fill(0, count($item_ids), '?'));
+        $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, $placeholders), " . implode(',', array_fill(0, count($qtys), '?')) . ") WHERE id IN ($placeholders)";
+
+        // Prepare the parameters
+        $params = array_merge($item_ids, $qtys, $item_ids);
+
+        // Execute the SQL query using prepared statement
+        DB::update($sql, $params);
 
         return response()->json([
-            'message' => 'success create item-in and updated stock',
+            'message' => 'success create item-out and updated stock',
             'data' => $itemOut
         ]);
     }
@@ -110,18 +124,31 @@ class ItemOutController extends Controller
     public function destroy(ItemOut $itemOut)
     {
         // update stock
-        $item_ids = array_column($itemOut->details->toArray(), 'item_id');
-        $qtys = array_column($itemOut->details->toArray(), 'qty');
-        
-        // Create the SQL query dynamically
-        $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
+        $details = $itemOut->details->toArray();
+        $item_ids = array_column($details, 'item_id');
+        $qtys = array_column($details, 'qty');
 
-        // Execute the SQL query
-        DB::statement($sql);
+        if (empty($item_ids)) {
+            // Handle the case when there are no items
+            $itemOut->delete();
+            return response()->json([
+                'message' => 'success delete item-out',
+            ]);
+        }
+
+        // Prepare the SQL query
+        $placeholders = implode(',', array_fill(0, count($item_ids), '?'));
+        $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, $placeholders), " . implode(',', array_fill(0, count($qtys), '?')) . ") WHERE id IN ($placeholders)";
+
+        // Prepare the parameters
+        $params = array_merge($item_ids, $qtys, $item_ids);
+
+        // Execute the SQL query using prepared statement
+        DB::update($sql, $params);
 
         $itemOut->delete();
         return response()->json([
-            'message' => 'success delete item-in',
+            'message' => 'success delete item-out',
         ]);
     }
 }

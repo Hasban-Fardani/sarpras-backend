@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubmissionItemAdminRequest;
+use App\Models\Employee;
 use App\Models\SubmissionItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -49,9 +50,13 @@ class SubmissionItemController extends Controller
     public function store(SubmissionItemAdminRequest $request)
     {
         $validatedData = $request->validated();
+
+        $userNIP = auth()->user()->nip;
+        $employeeID = Employee::where('nip', $userNIP)->first()->id;
+
         // directly create a new array with only the needed keys
         $data = [
-            'user_id' => auth()->user()->id,
+            'user_id' => $employeeID,
             'total_items' => count($validatedData['items']),
         ];
 

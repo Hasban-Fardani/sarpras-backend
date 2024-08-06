@@ -17,7 +17,7 @@ class RequestItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1, 10),
+            'employee_id' => fake()->numberBetween(1, 10),
             'total_items' => fake()->numberBetween(1, 100),
         ];
     }

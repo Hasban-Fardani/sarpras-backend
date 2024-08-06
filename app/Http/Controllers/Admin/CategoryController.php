@@ -14,6 +14,7 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
+        // get page and per_page
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
@@ -23,9 +24,12 @@ class CategoryController extends Controller
         // search by name
         $data->when($request->search, function ($data) use ($request) {
             $data->where(function ($query) use ($request) {
+                // select * from categories where name like %search%
                 $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
+
+        $data->orderBy('created_at', 'desc');
 
         // paginate
         $data = $data->paginate($perPage, ['*'], 'page', $page);

@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('item_ins', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('employee_id')->constrained('employees');
             $table->foreignId('supplier_id')->constrained('suppliers');
+            $table->text('note')->nullable();
             $table->integer('total_items')->default(0);
             $table->timestamps();
         });

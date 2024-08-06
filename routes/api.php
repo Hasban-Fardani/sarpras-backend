@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\Supervisor\RequestCheckController;
 use App\Http\Controllers\Supervisor\SubmissionCheckController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,7 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::apiResource('users', UsersController::class);
+    Route::apiResource('employees', EmployeeController::class);
 
     Route::apiResource('category', CategoryController::class);
 

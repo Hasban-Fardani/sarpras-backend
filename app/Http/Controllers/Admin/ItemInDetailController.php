@@ -19,10 +19,13 @@ class ItemInDetailController extends Controller
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
-        $itemInDetails = $itemIn->details()->paginate($perPage, ['*'], 'page', $page);
+        $data = ItemInDetail::with(['item:id,name'])
+            ->where('item_in_id', $itemIn->id)
+            ->paginate($perPage, ['*'], 'page', $page);
+
         return response()->json([
             'message' => 'success get item in detail',
-            ...$itemInDetails->toArray()
+            ...$data->toArray()
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemInRequest;
+use App\Models\Employee;
 use App\Models\ItemIn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,12 +20,12 @@ class ItemInController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all item-ins
-        $data = ItemIn::with('user:id,name');
+        $data = ItemIn::with(['employee:id,name', 'supplier:id,name']);
 
-        // search by user name
+        // search by employee name
         $data->when($request->search, function ($data) use ($request) {
             $data->where(function ($query) use ($request) {
-                $query->whereHas('user', function ($query) use ($request) {
+                $query->whereHas('employee', function ($query) use ($request) {
                     $query->where('name', 'like', '%' . $request->search . '%');
                 });
             });
@@ -49,12 +50,14 @@ class ItemInController extends Controller
      */
     public function store(ItemInRequest $request)
     {
-       // get validated data
+        // get validated data
         $validatedData = $request->validated();
 
+        $userNIP = auth()->user()->nip;
+        $employeeID = Employee::where('nip', $userNIP)->first()->id;
         // directly create a new array with only the needed keys
         $data = [
-            'user_id' => auth()->user()->id,
+            'employee_id' => $employeeID,
             'supplier_id' => $validatedData['supplier_id'],
             'total_items' => count($validatedData['items']),
         ];
@@ -86,7 +89,7 @@ class ItemInController extends Controller
     {
         return response()->json([
             'message' => 'success get item-in',
-            'data' => $itemIn->load(['user:id,name', 'details'])
+            'data' => $itemIn->load(['employee:id,name', 'supplier:id,name', 'details'])
         ]);
     }
 

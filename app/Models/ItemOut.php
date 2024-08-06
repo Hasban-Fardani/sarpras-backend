@@ -13,12 +13,12 @@ class ItemOut extends Model
 
     public function operator() 
     {
-        return $this->belongsTo(User::class, 'operator_id');
+        return $this->belongsTo(Employee::class, 'operator_id');
     }
 
     public function division() 
     {
-        return $this->belongsTo(User::class, 'division_id');
+        return $this->belongsTo(Employee::class, 'division_id');
     }
 
     public function details()

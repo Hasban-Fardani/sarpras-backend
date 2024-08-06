@@ -17,7 +17,7 @@ class SubmissionItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1, 10),
+            'employee_id' => fake()->numberBetween(1, 10),
             'status' => fake()->randomElement(['diajukan', 'disetujui', 'ditolak']),
             'total_items' => fake()->numberBetween(1, 100),
         ];

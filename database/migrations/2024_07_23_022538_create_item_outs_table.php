@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('item_outs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('operator_id')->constrained('users');
-            $table->foreignId('division_id')->constrained('users');
+            $table->foreignId('operator_id')->constrained('employees');
+            $table->foreignId('division_id')->constrained('employees')->onDelete('cascade');
             $table->integer('total_items')->default(0);
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }
