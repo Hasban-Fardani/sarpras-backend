@@ -33,7 +33,7 @@ class SubmissionItemDetailController extends Controller
         $this->checkStatus($submission);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required',
+            'item_code' => 'required',
             'qty' => 'required',
         ]);
 
@@ -45,7 +45,7 @@ class SubmissionItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $data['submission_item_id'] = $submission->id;
+        $data['submission_item_code'] = $submission->id;
         $data['qty_acc'] = $data['qty'];
         $submission->details()->create($data);
 
@@ -63,7 +63,7 @@ class SubmissionItemDetailController extends Controller
         $this->checkStatus($submission);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required|integer',
+            'item_code' => 'required|integer',
             'qty' => 'required|integer',
             'qty_acc' => 'required|integer',
         ]);
@@ -76,7 +76,7 @@ class SubmissionItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $detail = $submission->details()->where('item_id', $data['item_id'])->first();
+        $detail = $submission->details()->where('item_code', $data['item_code'])->first();
         $detail->update($data);
 
         return response()->json([

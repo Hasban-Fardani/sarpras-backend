@@ -3,10 +3,10 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ItemController;
-use App\Http\Controllers\Admin\ItemInController;
-use App\Http\Controllers\Admin\ItemInDetailController;
-use App\Http\Controllers\Admin\ItemOutController;
-use App\Http\Controllers\Admin\ItemOutDetailController;
+use App\Http\Controllers\Admin\IncomingItemController;
+use App\Http\Controllers\Admin\IncomingItemDetailController;
+use App\Http\Controllers\Admin\OutgoingItemController;
+use App\Http\Controllers\Admin\OutgoingItemDetailController;
 use App\Http\Controllers\Admin\RequestItemController;
 use App\Http\Controllers\Admin\RequestItemDetailController;
 use App\Http\Controllers\Admin\SubmissionItemController;
@@ -56,14 +56,14 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('supplier', SupplierController::class);
 
-    Route::apiResource('item-in', ItemInController::class)
+    Route::apiResource('incoming-item', IncomingItemController::class)
         ->except('update');
-    Route::apiResource('item-in.detail', ItemInDetailController::class)
+    Route::apiResource('incoming-item.detail', IncomingItemDetailController::class)
         ->except('show');
     
-    Route::apiResource('item-out', ItemOutController::class)
+    Route::apiResource('outgoing-item', OutgoingItemController::class)
         ->except('update');
-    Route::apiResource('item-out.detail', ItemOutDetailController::class)
+    Route::apiResource('outgoing-item.detail', OutgoingItemDetailController::class)
         ->except('show');
 
     Route::post('/submission/{submission}/accept', [SubmissionCheckController::class, 'accept']);

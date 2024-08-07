@@ -608,8 +608,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      category_id:
-        name: category_id
+      category_code:
+        name: category_code
         description: ''
         required: true
         example: 6
@@ -632,7 +632,7 @@ endpoints:
       unit: hecewoupl
       stock: 19
       min_stock: 13
-      category_id: 6
+      category_code: 6
       price: 15
     fileParameters: []
     responses: []
@@ -769,8 +769,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      category_id:
-        name: category_id
+      category_code:
+        name: category_code
         description: ''
         required: true
         example: 20
@@ -793,7 +793,7 @@ endpoints:
       unit: sseh
       stock: 15
       min_stock: 19
-      category_id: 20
+      category_code: 20
       price: 20
     fileParameters: []
     responses: []
@@ -904,8 +904,8 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      supplier_id:
-        name: supplier_id
+      supplier_code:
+        name: supplier_code
         description: ''
         required: true
         example: 5
@@ -923,8 +923,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      'items[].item_id':
-        name: 'items[].item_id'
+      'items[].item_code':
+        name: 'items[].item_code'
         description: ''
         required: true
         example: 4
@@ -942,10 +942,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      supplier_id: 5
+      supplier_code: 5
       items:
         -
-          item_id: 4
+          item_code: 4
           qty: 5
     fileParameters: []
     responses: []
@@ -1048,7 +1048,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'item-in/{item_in_id}/detail'
+    uri: 'item-in/{item_in_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1062,8 +1062,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_in_id:
-        name: item_in_id
+      item_in_code:
+        name: item_in_code
         description: 'The ID of the item in.'
         required: true
         example: 1
@@ -1072,7 +1072,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_in_id: 1
+      item_in_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1098,7 +1098,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'item-in/{item_in_id}/detail'
+    uri: 'item-in/{item_in_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1112,8 +1112,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_in_id:
-        name: item_in_id
+      item_in_code:
+        name: item_in_code
         description: 'The ID of the item in.'
         required: true
         example: 1
@@ -1122,12 +1122,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_in_id: 1
+      item_in_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: 8
@@ -1145,7 +1145,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 8
+      item_code: 8
       qty: 16
     fileParameters: []
     responses: []
@@ -1159,7 +1159,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'item-in/{item_in_id}/detail/{id}'
+    uri: 'item-in/{item_in_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1173,8 +1173,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_in_id:
-        name: item_in_id
+      item_in_code:
+        name: item_in_code
         description: 'The ID of the item in.'
         required: true
         example: 1
@@ -1192,13 +1192,13 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_in_id: 1
+      item_in_code: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: false
         example: 7
@@ -1216,7 +1216,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 7
+      item_code: 7
       qty: 11
     fileParameters: []
     responses: []
@@ -1229,7 +1229,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'item-in/{item_in_id}/detail/{id}'
+    uri: 'item-in/{item_in_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1243,8 +1243,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_in_id:
-        name: item_in_id
+      item_in_code:
+        name: item_in_code
         description: 'The ID of the item in.'
         required: true
         example: 1
@@ -1262,7 +1262,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_in_id: 1
+      item_in_code: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -1337,8 +1337,8 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      division_id:
-        name: division_id
+      division_code:
+        name: division_code
         description: ''
         required: true
         example: 3
@@ -1356,8 +1356,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      'items[].item_id':
-        name: 'items[].item_id'
+      'items[].item_code':
+        name: 'items[].item_code'
         description: ''
         required: true
         example: 18
@@ -1375,10 +1375,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      division_id: 3
+      division_code: 3
       items:
         -
-          item_id: 18
+          item_code: 18
           qty: 7
     fileParameters: []
     responses: []
@@ -1481,7 +1481,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'item-out/{item_out_id}/detail'
+    uri: 'item-out/{item_out_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1495,8 +1495,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_out_id:
-        name: item_out_id
+      item_out_code:
+        name: item_out_code
         description: 'The ID of the item out.'
         required: true
         example: 1
@@ -1505,7 +1505,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_out_id: 1
+      item_out_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1531,7 +1531,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'item-out/{item_out_id}/detail'
+    uri: 'item-out/{item_out_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1545,8 +1545,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_out_id:
-        name: item_out_id
+      item_out_code:
+        name: item_out_code
         description: 'The ID of the item out.'
         required: true
         example: 1
@@ -1555,12 +1555,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_out_id: 1
+      item_out_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: 11
@@ -1578,7 +1578,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 11
+      item_code: 11
       qty: 19
     fileParameters: []
     responses: []
@@ -1592,7 +1592,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'item-out/{item_out_id}/detail/{id}'
+    uri: 'item-out/{item_out_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1606,8 +1606,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_out_id:
-        name: item_out_id
+      item_out_code:
+        name: item_out_code
         description: 'The ID of the item out.'
         required: true
         example: 1
@@ -1625,13 +1625,13 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_out_id: 1
+      item_out_code: 1
       id: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: false
         example: 12
@@ -1649,7 +1649,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 12
+      item_code: 12
       qty: 20
     fileParameters: []
     responses: []
@@ -1662,7 +1662,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'item-out/{item_out_id}/detail/{id}'
+    uri: 'item-out/{item_out_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1676,8 +1676,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      item_out_id:
-        name: item_out_id
+      item_out_code:
+        name: item_out_code
         description: 'The ID of the item out.'
         required: true
         example: 1
@@ -1695,7 +1695,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      item_out_id: 1
+      item_out_code: 1
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -1712,7 +1712,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/accept'
+    uri: 'submission/{submission_code}/accept'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1726,8 +1726,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -1736,7 +1736,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1752,7 +1752,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/decline'
+    uri: 'submission/{submission_code}/decline'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1766,8 +1766,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -1776,7 +1776,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1860,8 +1860,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      'items[].item_id':
-        name: 'items[].item_id'
+      'items[].item_code':
+        name: 'items[].item_code'
         description: ''
         required: true
         example: 14
@@ -1881,7 +1881,7 @@ endpoints:
     cleanBodyParameters:
       items:
         -
-          item_id: 14
+          item_code: 14
           qty: 3
     fileParameters: []
     responses: []
@@ -1984,7 +1984,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'submission/{submission_id}/detail'
+    uri: 'submission/{submission_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -1998,8 +1998,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -2008,7 +2008,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2034,7 +2034,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'submission/{submission_id}/detail'
+    uri: 'submission/{submission_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2048,8 +2048,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -2058,12 +2058,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: quos
@@ -2081,7 +2081,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: quos
+      item_code: quos
       qty: et
     fileParameters: []
     responses: []
@@ -2095,7 +2095,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'submission/{submission_id}/detail/{id}'
+    uri: 'submission/{submission_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2109,8 +2109,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -2128,13 +2128,13 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
       id: nulla
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: 5
@@ -2161,7 +2161,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 5
+      item_code: 5
       qty: 2
       qty_acc: 6
     fileParameters: []
@@ -2175,7 +2175,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'submission/{submission_id}/detail/{id}'
+    uri: 'submission/{submission_code}/detail/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2189,8 +2189,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      submission_id:
-        name: submission_id
+      submission_code:
+        name: submission_code
         description: 'The ID of the submission.'
         required: true
         example: 1
@@ -2208,7 +2208,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      submission_id: 1
+      submission_code: 1
       id: 2
     queryParameters: []
     cleanQueryParameters: []
@@ -2373,8 +2373,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      'items[].item_id':
-        name: 'items[].item_id'
+      'items[].item_code':
+        name: 'items[].item_code'
         description: ''
         required: true
         example: 13
@@ -2394,7 +2394,7 @@ endpoints:
     cleanBodyParameters:
       items:
         -
-          item_id: 13
+          item_code: 13
           qty: 6
     fileParameters: []
     responses: []
@@ -2497,7 +2497,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'request-item/{request_item_id}/detail'
+    uri: 'request-item/{request_item_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2511,8 +2511,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
+      request_item_code:
+        name: request_item_code
         description: 'The ID of the request item.'
         required: true
         example: 1
@@ -2521,7 +2521,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
+      request_item_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2547,7 +2547,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'request-item/{request_item_id}/detail'
+    uri: 'request-item/{request_item_code}/detail'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2561,8 +2561,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
+      request_item_code:
+        name: request_item_code
         description: 'The ID of the request item.'
         required: true
         example: 1
@@ -2571,12 +2571,12 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
+      request_item_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: aut
@@ -2594,7 +2594,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: aut
+      item_code: aut
       qty: aliquam
     fileParameters: []
     responses: []
@@ -2608,7 +2608,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'request-item/{request_item_id}/detail/{requestItemDetail}'
+    uri: 'request-item/{request_item_code}/detail/{requestItemDetail}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2622,8 +2622,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
+      request_item_code:
+        name: request_item_code
         description: 'The ID of the request item.'
         required: true
         example: 1
@@ -2641,13 +2641,13 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
+      request_item_code: 1
       requestItemDetail: vitae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      item_id:
-        name: item_id
+      item_code:
+        name: item_code
         description: ''
         required: true
         example: 13
@@ -2674,7 +2674,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      item_id: 13
+      item_code: 13
       qty: 5
       qty_acc: 7
     fileParameters: []
@@ -2688,7 +2688,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'request-item/{request_item_id}/detail/{requestItemDetail_id}'
+    uri: 'request-item/{request_item_code}/detail/{requestItemDetail_code}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2702,8 +2702,8 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      request_item_id:
-        name: request_item_id
+      request_item_code:
+        name: request_item_code
         description: 'The ID of the request item.'
         required: true
         example: 1
@@ -2711,8 +2711,8 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      requestItemDetail_id:
-        name: requestItemDetail_id
+      requestItemDetail_code:
+        name: requestItemDetail_code
         description: 'The ID of the requestItemDetail.'
         required: true
         example: 1
@@ -2721,8 +2721,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      request_item_id: 1
-      requestItemDetail_id: 1
+      request_item_code: 1
+      requestItemDetail_code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

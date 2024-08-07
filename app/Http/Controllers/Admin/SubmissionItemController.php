@@ -16,13 +16,13 @@ class SubmissionItemController extends Controller
      */
     public function index(Request $request)
     {
-        $data = SubmissionItem::with('user:id,name');
+        $data = SubmissionItem::with('employee:code,name');
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
         $data->when($request->search, function ($data) use ($request) {
             $data->where(function ($query) use ($request) {
-                $query->whereHas('user', function ($query) use ($request) {
+                $query->whereHas('employee', function ($query) use ($request) {
                     $query->where('name', 'like', '%' . $request->search . '%');
                 });
             });
@@ -56,7 +56,7 @@ class SubmissionItemController extends Controller
 
         // directly create a new array with only the needed keys
         $data = [
-            'user_id' => $employeeID,
+            'user_code' => $employeeID,
             'total_items' => count($validatedData['items']),
         ];
 
@@ -87,7 +87,7 @@ class SubmissionItemController extends Controller
     {
         return response()->json([
             'message' => 'success get submission item',
-            'data' => $submission->load(['user:id,name', 'details'])
+            'data' => $submission->load(['user:code,name', 'details'])
         ]);
     }
 

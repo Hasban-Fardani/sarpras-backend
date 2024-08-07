@@ -18,7 +18,7 @@ class ItemController extends Controller
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
 
-        $data = Item::with('category:id,name');
+        $data = Item::with('category:code,name');
 
         // search by name
         $data->when($request->search, function ($data) use ($request) {
@@ -28,8 +28,8 @@ class ItemController extends Controller
         });
 
         // filter by category
-        $data->when($request->category_id, function ($data) use ($request) {
-            $data->where('category_id', $request->category_id);
+        $data->when($request->category_code, function ($data) use ($request) {
+            $data->where('category_code', $request->category_code);
         });
 
         $data = $data->paginate($perPage, ['*'], 'page', $page);

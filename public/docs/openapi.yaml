@@ -312,7 +312,7 @@ paths:
                   type: integer
                   description: ''
                   example: 13
-                category_id:
+                category_code:
                   type: integer
                   description: ''
                   example: 6
@@ -326,7 +326,7 @@ paths:
                 - unit
                 - stock
                 - min_stock
-                - category_id
+                - category_code
                 - price
       security: []
   '/item/{id}':
@@ -386,7 +386,7 @@ paths:
                   type: integer
                   description: ''
                   example: 19
-                category_id:
+                category_code:
                   type: integer
                   description: ''
                   example: 20
@@ -400,7 +400,7 @@ paths:
                 - unit
                 - stock
                 - min_stock
-                - category_id
+                - category_code
                 - price
       security: []
     delete:
@@ -458,7 +458,7 @@ paths:
             schema:
               type: object
               properties:
-                supplier_id:
+                supplier_code:
                   type: integer
                   description: ''
                   example: 5
@@ -470,7 +470,7 @@ paths:
                   items:
                     type: object
                     properties:
-                      item_id:
+                      item_code:
                         type: integer
                         description: ''
                         example: 4
@@ -479,10 +479,10 @@ paths:
                         description: ''
                         example: 5
                     required:
-                      - item_id
+                      - item_code
                       - qty
               required:
-                - supplier_id
+                - supplier_code
                 - items
       security: []
   '/item-in/{id}':
@@ -525,7 +525,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/item-in/{item_in_id}/detail':
+  '/item-in/{item_in_code}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -562,7 +562,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 8
@@ -571,19 +571,19 @@ paths:
                   description: ''
                   example: 16
               required:
-                - item_id
+                - item_code
                 - qty
       security: []
     parameters:
       -
         in: path
-        name: item_in_id
+        name: item_in_code
         description: 'The ID of the item in.'
         example: 1
         required: true
         schema:
           type: integer
-  '/item-in/{item_in_id}/detail/{id}':
+  '/item-in/{item_in_code}/detail/{id}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -599,7 +599,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 7
@@ -620,7 +620,7 @@ paths:
     parameters:
       -
         in: path
-        name: item_in_id
+        name: item_in_code
         description: 'The ID of the item in.'
         example: 1
         required: true
@@ -671,7 +671,7 @@ paths:
             schema:
               type: object
               properties:
-                division_id:
+                division_code:
                   type: integer
                   description: ''
                   example: 3
@@ -683,7 +683,7 @@ paths:
                   items:
                     type: object
                     properties:
-                      item_id:
+                      item_code:
                         type: integer
                         description: ''
                         example: 18
@@ -692,10 +692,10 @@ paths:
                         description: ''
                         example: 7
                     required:
-                      - item_id
+                      - item_code
                       - qty
               required:
-                - division_id
+                - division_code
                 - items
       security: []
   '/item-out/{id}':
@@ -738,7 +738,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/item-out/{item_out_id}/detail':
+  '/item-out/{item_out_code}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -775,7 +775,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 11
@@ -784,19 +784,19 @@ paths:
                   description: ''
                   example: 19
               required:
-                - item_id
+                - item_code
                 - qty
       security: []
     parameters:
       -
         in: path
-        name: item_out_id
+        name: item_out_code
         description: 'The ID of the item out.'
         example: 1
         required: true
         schema:
           type: integer
-  '/item-out/{item_out_id}/detail/{id}':
+  '/item-out/{item_out_code}/detail/{id}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -812,7 +812,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 12
@@ -833,7 +833,7 @@ paths:
     parameters:
       -
         in: path
-        name: item_out_id
+        name: item_out_code
         description: 'The ID of the item out.'
         example: 1
         required: true
@@ -847,10 +847,10 @@ paths:
         required: true
         schema:
           type: string
-  '/submission/{submission_id}/accept':
+  '/submission/{submission_code}/accept':
     post:
       summary: ''
-      operationId: postSubmissionSubmission_idAccept
+      operationId: postSubmissionSubmission_codeAccept
       description: ''
       parameters: []
       responses: {  }
@@ -860,16 +860,16 @@ paths:
     parameters:
       -
         in: path
-        name: submission_id
+        name: submission_code
         description: 'The ID of the submission.'
         example: 1
         required: true
         schema:
           type: integer
-  '/submission/{submission_id}/decline':
+  '/submission/{submission_code}/decline':
     post:
       summary: ''
-      operationId: postSubmissionSubmission_idDecline
+      operationId: postSubmissionSubmission_codeDecline
       description: ''
       parameters: []
       responses: {  }
@@ -879,7 +879,7 @@ paths:
     parameters:
       -
         in: path
-        name: submission_id
+        name: submission_code
         description: 'The ID of the submission.'
         example: 1
         required: true
@@ -930,7 +930,7 @@ paths:
                   items:
                     type: object
                     properties:
-                      item_id:
+                      item_code:
                         type: integer
                         description: ''
                         example: 14
@@ -939,7 +939,7 @@ paths:
                         description: ''
                         example: 3
                     required:
-                      - item_id
+                      - item_code
                       - qty
               required:
                 - items
@@ -984,7 +984,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/submission/{submission_id}/detail':
+  '/submission/{submission_code}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -1021,7 +1021,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: string
                   description: ''
                   example: quos
@@ -1030,19 +1030,19 @@ paths:
                   description: ''
                   example: et
               required:
-                - item_id
+                - item_code
                 - qty
       security: []
     parameters:
       -
         in: path
-        name: submission_id
+        name: submission_code
         description: 'The ID of the submission.'
         example: 1
         required: true
         schema:
           type: integer
-  '/submission/{submission_id}/detail/{id}':
+  '/submission/{submission_code}/detail/{id}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -1058,7 +1058,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 5
@@ -1071,7 +1071,7 @@ paths:
                   description: ''
                   example: 6
               required:
-                - item_id
+                - item_code
                 - qty
                 - qty_acc
       security: []
@@ -1087,7 +1087,7 @@ paths:
     parameters:
       -
         in: path
-        name: submission_id
+        name: submission_code
         description: 'The ID of the submission.'
         example: 1
         required: true
@@ -1184,7 +1184,7 @@ paths:
                   items:
                     type: object
                     properties:
-                      item_id:
+                      item_code:
                         type: integer
                         description: ''
                         example: 13
@@ -1193,7 +1193,7 @@ paths:
                         description: ''
                         example: 6
                     required:
-                      - item_id
+                      - item_code
                       - qty
               required:
                 - items
@@ -1238,7 +1238,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/request-item/{request_item_id}/detail':
+  '/request-item/{request_item_code}/detail':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -1275,7 +1275,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: string
                   description: ''
                   example: aut
@@ -1284,19 +1284,19 @@ paths:
                   description: ''
                   example: aliquam
               required:
-                - item_id
+                - item_code
                 - qty
       security: []
     parameters:
       -
         in: path
-        name: request_item_id
+        name: request_item_code
         description: 'The ID of the request item.'
         example: 1
         required: true
         schema:
           type: integer
-  '/request-item/{request_item_id}/detail/{requestItemDetail}':
+  '/request-item/{request_item_code}/detail/{requestItemDetail}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -1312,7 +1312,7 @@ paths:
             schema:
               type: object
               properties:
-                item_id:
+                item_code:
                   type: integer
                   description: ''
                   example: 13
@@ -1325,14 +1325,14 @@ paths:
                   description: ''
                   example: 7
               required:
-                - item_id
+                - item_code
                 - qty
                 - qty_acc
       security: []
     parameters:
       -
         in: path
-        name: request_item_id
+        name: request_item_code
         description: 'The ID of the request item.'
         example: 1
         required: true
@@ -1346,7 +1346,7 @@ paths:
         required: true
         schema:
           type: string
-  '/request-item/{request_item_id}/detail/{requestItemDetail_id}':
+  '/request-item/{request_item_code}/detail/{requestItemDetail_code}':
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -1359,7 +1359,7 @@ paths:
     parameters:
       -
         in: path
-        name: request_item_id
+        name: request_item_code
         description: 'The ID of the request item.'
         example: 1
         required: true
@@ -1367,7 +1367,7 @@ paths:
           type: integer
       -
         in: path
-        name: requestItemDetail_id
+        name: requestItemDetail_code
         description: 'The ID of the requestItemDetail.'
         example: 1
         required: true

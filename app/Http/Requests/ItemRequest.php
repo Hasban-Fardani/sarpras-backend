@@ -27,7 +27,7 @@ class ItemRequest extends FormRequest
             'unit' => 'required|string|max:255',  // satuan
             'stock' => 'required|integer',
             'min_stock' => 'required|integer',
-            'category_id' => 'required|integer',
+            'category_code' => 'required|integer',
             'price' => 'required|integer',
         ];
     }

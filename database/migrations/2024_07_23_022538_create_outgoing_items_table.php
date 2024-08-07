@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_outs', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('operator_id')->constrained('employees');
-            $table->foreignId('division_id')->constrained('employees')->onDelete('cascade');
+        Schema::create('outgoing_items', function (Blueprint $table) {
+            $table->string('code')->primary();
+            $table->string('operator_nip');
+            $table->string('division_nip');
             $table->integer('total_items')->default(0);
             $table->text('note')->nullable();
+
+            $table->foreign('operator_nip')->references('nip')->on('employees');
+            $table->foreign('division_nip')->references('nip')->on('employees');
             $table->timestamps();
         });
     }
@@ -26,6 +29,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('outgoing_items');
         Schema::dropIfExists('item_outs');
     }
 };

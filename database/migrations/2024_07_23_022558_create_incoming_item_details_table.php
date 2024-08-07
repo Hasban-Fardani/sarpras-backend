@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_in_details', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('item_in_id')->constrained('item_ins')->cascadeOnDelete();
-            $table->foreignId('item_id')->constrained('items')->cascadeOnDelete();
+        Schema::create('outgoing_items_details', function (Blueprint $table) {
+            $table->string('incoming_item_code');
+            $table->string('item_code');
             $table->integer('qty');
+            
+            $table->foreign('incoming_item_code')->references('code')->on('incoming_items')->cascadeOnDelete();
+            $table->foreign('item_code')->references('code')->on('items')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -25,6 +27,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('incoming_item_details');
         Schema::dropIfExists('item_in_details');
     }
 };

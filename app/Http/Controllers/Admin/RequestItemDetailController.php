@@ -33,7 +33,7 @@ class RequestItemDetailController extends Controller
         $this->checkStatus($requestItem);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required',
+            'item_code' => 'required',
             'qty' => 'required',
         ]);
 
@@ -45,7 +45,7 @@ class RequestItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $data['request_item_id'] = $requestItem->id;
+        $data['request_item_code'] = $requestItem->id;
         $data['qty_acc'] = $data['qty'];
         $requestItem->details()->create($data);
 
@@ -71,7 +71,7 @@ class RequestItemDetailController extends Controller
         $this->checkStatus($requestItem);
 
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required|integer',
+            'item_code' => 'required|integer',
             'qty' => 'required|integer',
             'qty_acc' => 'required|integer',
         ]);
@@ -84,7 +84,7 @@ class RequestItemDetailController extends Controller
         }
 
         $data = $validator->validated();
-        $detail = $requestItem->details()->where('item_id', $data['item_id'])->first();
+        $detail = $requestItem->details()->where('item_code', $data['item_code'])->first();
         $detail->update($data);
 
         return response()->json([

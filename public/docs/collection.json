@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "e5ac3d33-ccb4-4d5f-b6b1-e87e0b83f757",
+        "_postman_code": "e5ac3d33-ccb4-4d5f-b6b1-e87e0b83f757",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -630,7 +630,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gx\",\"merk\":\"zdubyxkjpdqesvxxy\",\"unit\":\"hecewoupl\",\"stock\":19,\"min_stock\":13,\"category_id\":6,\"price\":15}"
+                            "raw": "{\"name\":\"gx\",\"merk\":\"zdubyxkjpdqesvxxy\",\"unit\":\"hecewoupl\",\"stock\":19,\"min_stock\":13,\"category_code\":6,\"price\":15}"
                         },
                         "description": "",
                         "auth": {
@@ -729,7 +729,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"pzhxkkdpdnrcvpwqq\",\"merk\":\"lqelsoruaoxzreprqqevlhxem\",\"unit\":\"sseh\",\"stock\":15,\"min_stock\":19,\"category_id\":20,\"price\":20}"
+                            "raw": "{\"name\":\"pzhxkkdpdnrcvpwqq\",\"merk\":\"lqelsoruaoxzreprqqevlhxem\",\"unit\":\"sseh\",\"stock\":15,\"min_stock\":19,\"category_code\":20,\"price\":20}"
                         },
                         "description": "",
                         "auth": {
@@ -848,7 +848,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"supplier_id\":5,\"items\":[{\"item_id\":4,\"qty\":5}]}"
+                            "raw": "{\"supplier_code\":5,\"items\":[{\"item_code\":4,\"qty\":5}]}"
                         },
                         "description": "",
                         "auth": {
@@ -958,13 +958,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-in\/:item_in_id\/detail",
+                            "path": "item-in\/:item_in_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail",
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_code\/detail",
                             "variable": [
                                 {
-                                    "id": "item_in_id",
-                                    "key": "item_in_id",
+                                    "id": "item_in_code",
+                                    "key": "item_in_code",
                                     "value": "1",
                                     "description": "The ID of the item in."
                                 }
@@ -1018,13 +1018,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-in\/:item_in_id\/detail",
+                            "path": "item-in\/:item_in_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail",
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_code\/detail",
                             "variable": [
                                 {
-                                    "id": "item_in_id",
-                                    "key": "item_in_id",
+                                    "id": "item_in_code",
+                                    "key": "item_in_code",
                                     "value": "1",
                                     "description": "The ID of the item in."
                                 }
@@ -1043,7 +1043,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":8,\"qty\":16}"
+                            "raw": "{\"item_code\":8,\"qty\":16}"
                         },
                         "description": "",
                         "auth": {
@@ -1057,13 +1057,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-in\/:item_in_id\/detail\/:id",
+                            "path": "item-in\/:item_in_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "item_in_id",
-                                    "key": "item_in_id",
+                                    "id": "item_in_code",
+                                    "key": "item_in_code",
                                     "value": "1",
                                     "description": "The ID of the item in."
                                 },
@@ -1088,7 +1088,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":7,\"qty\":11}"
+                            "raw": "{\"item_code\":7,\"qty\":11}"
                         },
                         "description": "",
                         "auth": {
@@ -1102,13 +1102,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-in\/:item_in_id\/detail\/:id",
+                            "path": "item-in\/:item_in_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-in\/:item_in_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/item-in\/:item_in_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "item_in_id",
-                                    "key": "item_in_id",
+                                    "id": "item_in_code",
+                                    "key": "item_in_code",
                                     "value": "1",
                                     "description": "The ID of the item in."
                                 },
@@ -1213,7 +1213,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"division_id\":3,\"items\":[{\"item_id\":18,\"qty\":7}]}"
+                            "raw": "{\"division_code\":3,\"items\":[{\"item_code\":18,\"qty\":7}]}"
                         },
                         "description": "",
                         "auth": {
@@ -1323,13 +1323,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-out\/:item_out_id\/detail",
+                            "path": "item-out\/:item_out_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail",
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_code\/detail",
                             "variable": [
                                 {
-                                    "id": "item_out_id",
-                                    "key": "item_out_id",
+                                    "id": "item_out_code",
+                                    "key": "item_out_code",
                                     "value": "1",
                                     "description": "The ID of the item out."
                                 }
@@ -1383,13 +1383,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-out\/:item_out_id\/detail",
+                            "path": "item-out\/:item_out_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail",
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_code\/detail",
                             "variable": [
                                 {
-                                    "id": "item_out_id",
-                                    "key": "item_out_id",
+                                    "id": "item_out_code",
+                                    "key": "item_out_code",
                                     "value": "1",
                                     "description": "The ID of the item out."
                                 }
@@ -1408,7 +1408,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":11,\"qty\":19}"
+                            "raw": "{\"item_code\":11,\"qty\":19}"
                         },
                         "description": "",
                         "auth": {
@@ -1422,13 +1422,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-out\/:item_out_id\/detail\/:id",
+                            "path": "item-out\/:item_out_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "item_out_id",
-                                    "key": "item_out_id",
+                                    "id": "item_out_code",
+                                    "key": "item_out_code",
                                     "value": "1",
                                     "description": "The ID of the item out."
                                 },
@@ -1453,7 +1453,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":12,\"qty\":20}"
+                            "raw": "{\"item_code\":12,\"qty\":20}"
                         },
                         "description": "",
                         "auth": {
@@ -1467,13 +1467,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "item-out\/:item_out_id\/detail\/:id",
+                            "path": "item-out\/:item_out_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/item-out\/:item_out_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/item-out\/:item_out_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "item_out_id",
-                                    "key": "item_out_id",
+                                    "id": "item_out_code",
+                                    "key": "item_out_code",
                                     "value": "1",
                                     "description": "The ID of the item out."
                                 },
@@ -1505,17 +1505,17 @@
                     "response": []
                 },
                 {
-                    "name": "POST submission\/{submission_id}\/accept",
+                    "name": "POST submission\/{submission_code}\/accept",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/accept",
+                            "path": "submission\/:submission_code\/accept",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/accept",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/accept",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 }
@@ -1541,17 +1541,17 @@
                     "response": []
                 },
                 {
-                    "name": "POST submission\/{submission_id}\/decline",
+                    "name": "POST submission\/{submission_code}\/decline",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/decline",
+                            "path": "submission\/:submission_code\/decline",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/decline",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/decline",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 }
@@ -1650,7 +1650,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":14,\"qty\":3}]}"
+                            "raw": "{\"items\":[{\"item_code\":14,\"qty\":3}]}"
                         },
                         "description": "",
                         "auth": {
@@ -1760,13 +1760,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail",
+                            "path": "submission\/:submission_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/detail",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 }
@@ -1820,13 +1820,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail",
+                            "path": "submission\/:submission_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/detail",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 }
@@ -1845,7 +1845,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"quos\",\"qty\":\"et\"}"
+                            "raw": "{\"item_code\":\"quos\",\"qty\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1859,13 +1859,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail\/:id",
+                            "path": "submission\/:submission_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 },
@@ -1890,7 +1890,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":5,\"qty\":2,\"qty_acc\":6}"
+                            "raw": "{\"item_code\":5,\"qty\":2,\"qty_acc\":6}"
                         },
                         "description": "",
                         "auth": {
@@ -1904,13 +1904,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "submission\/:submission_id\/detail\/:id",
+                            "path": "submission\/:submission_code\/detail\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/submission\/:submission_id\/detail\/:id",
+                            "raw": "{{baseUrl}}\/submission\/:submission_code\/detail\/:id",
                             "variable": [
                                 {
-                                    "id": "submission_id",
-                                    "key": "submission_id",
+                                    "id": "submission_code",
+                                    "key": "submission_code",
                                     "value": "1",
                                     "description": "The ID of the submission."
                                 },
@@ -2087,7 +2087,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"items\":[{\"item_id\":13,\"qty\":6}]}"
+                            "raw": "{\"items\":[{\"item_code\":13,\"qty\":6}]}"
                         },
                         "description": "",
                         "auth": {
@@ -2197,13 +2197,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail",
+                            "path": "request-item\/:request_item_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_code\/detail",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "request_item_code",
+                                    "key": "request_item_code",
                                     "value": "1",
                                     "description": "The ID of the request item."
                                 }
@@ -2257,13 +2257,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail",
+                            "path": "request-item\/:request_item_code\/detail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_code\/detail",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "request_item_code",
+                                    "key": "request_item_code",
                                     "value": "1",
                                     "description": "The ID of the request item."
                                 }
@@ -2282,7 +2282,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":\"aut\",\"qty\":\"aliquam\"}"
+                            "raw": "{\"item_code\":\"aut\",\"qty\":\"aliquam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2296,13 +2296,13 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "path": "request-item\/:request_item_code\/detail\/:requestItemDetail",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_code\/detail\/:requestItemDetail",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "request_item_code",
+                                    "key": "request_item_code",
                                     "value": "1",
                                     "description": "The ID of the request item."
                                 },
@@ -2327,7 +2327,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"item_id\":13,\"qty\":5,\"qty_acc\":7}"
+                            "raw": "{\"item_code\":13,\"qty\":5,\"qty_acc\":7}"
                         },
                         "description": "",
                         "auth": {
@@ -2341,19 +2341,19 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "path": "request-item\/:request_item_code\/detail\/:requestItemDetail_code",
                             "query": [],
-                            "raw": "{{baseUrl}}\/request-item\/:request_item_id\/detail\/:requestItemDetail_id",
+                            "raw": "{{baseUrl}}\/request-item\/:request_item_code\/detail\/:requestItemDetail_code",
                             "variable": [
                                 {
-                                    "id": "request_item_id",
-                                    "key": "request_item_id",
+                                    "id": "request_item_code",
+                                    "key": "request_item_code",
                                     "value": "1",
                                     "description": "The ID of the request item."
                                 },
                                 {
-                                    "id": "requestItemDetail_id",
-                                    "key": "requestItemDetail_id",
+                                    "id": "requestItemDetail_code",
+                                    "key": "requestItemDetail_code",
                                     "value": "1",
                                     "description": "The ID of the requestItemDetail."
                                 }

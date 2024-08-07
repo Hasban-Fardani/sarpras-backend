@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ItemInRequest extends FormRequest
+class IncomingItemRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,9 @@ class ItemInRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'supplier_id' => 'required|integer',
+            'supplier_code' => 'required|integer',
             'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
+            'items.*.item_code' => 'required|integer',
             'items.*.qty' => 'required|integer',
         ];
     }

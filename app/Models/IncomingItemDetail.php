@@ -4,21 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class IncomingItemDetail extends Model
 {
     protected $guarded = [];
     protected $primaryKey = 'code';
     protected $keyType = 'string';
     protected $autoIncrement = false;
 
-    public function category()
+    public function item()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Item::class);
     }
 
-    public function hasSufficientStock(int $amount): bool
+    public function incoming_item()
     {
-        return $this->stock >= $amount;
+        return $this->belongsTo(IncomingItem::class);
     }
 
     public function getRouteKeyName()

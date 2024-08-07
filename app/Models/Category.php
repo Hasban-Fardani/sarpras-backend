@@ -9,7 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = [];
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
+    protected $autoIncrement = false;
 
     public function items()
     {

@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Item;
-use App\Models\ItemOut;
+use App\Models\OutgoingItem;
 use App\Models\ItemOutDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class ItemOutDetailController extends Controller
+class OutgoingItemDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, ItemOut $itemOut)
+    public function index(Request $request, OutgoingItem $itemOut)
     {
         $page = $request->input('page', 1);
         $perPage = $request->input('per_page', 10);
@@ -29,11 +29,11 @@ class ItemOutDetailController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, ItemOut $itemOut)
+    public function store(Request $request, OutgoingItem $itemOut)
     {
         // validate
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required|integer',
+            'item_code' => 'required|integer',
             'qty' => 'required|integer',
         ]);
 
@@ -46,7 +46,7 @@ class ItemOutDetailController extends Controller
         }
 
         // check if item exist in item in
-        $itemOutDetail = $itemOut->details()->where('item_id', $request->item_id)->first();
+        $itemOutDetail = $itemOut->details()->where('item_code', $request->item_code)->first();
         if ($itemOutDetail) {
             $itemOutDetail->update([
                 'qty' => $itemOutDetail->qty + $request->qty
@@ -60,7 +60,7 @@ class ItemOutDetailController extends Controller
         $itemOut->details()->create($validator->validated());
 
         // decrement item stock
-        Item::where('id', $request->item_id)->decrement('stock', $request->qty);
+        Item::where('id', $request->item_code)->decrement('stock', $request->qty);
 
         return response()->json([
             'message' => 'success add item in detail',
@@ -83,7 +83,7 @@ class ItemOutDetailController extends Controller
     {
         // validate
         $validator = Validator::make($request->all(), [
-            'item_id' => 'integer',
+            'item_code' => 'integer',
             'qty' => 'integer',
         ]);
 
@@ -106,7 +106,7 @@ class ItemOutDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ItemOut $itemOut, string $idDetails)
+    public function destroy(OutgoingItem $itemOut, string $idDetails)
     {
         $itemOutDetail = ItemOutDetail::find($idDetails);
         $itemOutDetail->delete();

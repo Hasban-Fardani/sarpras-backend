@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('submission_items', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('employee_id')->constrained('employees')->cascadeOnDelete();
+            $table->string('code')->primary();
+            $table->string('employee_nip');
+            $table->foreign('employee_nip')->references('nip')->on('employees')->cascadeOnDelete();
             $table->enum('status', ['diajukan', 'disetujui', 'ditolak'])->default('diajukan');
             $table->integer('total_items');
             $table->timestamps();

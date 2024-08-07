@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class RequestItem extends Model
 {
-    use HasFactory;
-
-    protected $guarded = ['id'];
+    protected $guarded = [];
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
+    protected $autoIncrement = false;
 
     public function employee()
     {
@@ -18,5 +19,10 @@ class RequestItem extends Model
 
     public function details(){
         return $this->hasMany(RequestItemDetail::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'code';
     }
 }

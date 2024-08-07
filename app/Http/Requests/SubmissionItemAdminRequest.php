@@ -23,7 +23,7 @@ class SubmissionItemAdminRequest extends FormRequest
     {
         return [
             'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
+            'items.*.item_code' => 'required|integer',
             'items.*.qty' => 'required|integer',
         ];
     }

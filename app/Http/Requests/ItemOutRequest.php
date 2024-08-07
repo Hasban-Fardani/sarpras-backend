@@ -22,9 +22,9 @@ class ItemOutRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'division_id' => 'required|integer',
+            'division_code' => 'required|integer',
             'items' => 'required|array',
-            'items.*.item_id' => 'required|integer',
+            'items.*.item_code' => 'required|integer',
             'items.*.qty' => 'required|integer',
         ];
     }

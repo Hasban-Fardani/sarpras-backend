@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemOutRequest;
 use App\Models\Employee;
-use App\Models\ItemOut;
+use App\Models\OutgoingItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ItemOutController extends Controller
+class OutgoingItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class ItemOutController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all item-ins
-        $data = ItemOut::with(['operator:id,name', 'division:id,name']);
+        $data = OutgoingItem::with(['operator:code,name', 'division:code,name']);
 
         // search by operator or division name
         $data->when($request->search, function ($data) use ($request) {
@@ -37,8 +37,8 @@ class ItemOutController extends Controller
         });
 
         // filter by division
-        $data->when($request->division_id, function ($data) use ($request) {
-            $data->where('division_id', $request->division_id);
+        $data->when($request->division_code, function ($data) use ($request) {
+            $data->where('division_code', $request->division_code);
         });
 
         // paginate
@@ -63,19 +63,19 @@ class ItemOutController extends Controller
         
         // directly create a new array with only the needed keys
         $data = [
-            'operator_id' => $employeeID,
-            'division_id' => $validatedData['division_id'],
+            'operator_code' => $employeeID,
+            'division_code' => $validatedData['division_code'],
             'total_items' => count($validatedData['items']),
         ];
 
-        $itemOut = ItemOut::create($data);
+        $itemOut = OutgoingItem::create($data);
         $itemOut->details()->createMany($validatedData['items']);
 
         // update stock
-        $item_ids = array_column($validatedData['items'], 'item_id');
+        $item_codes = array_column($validatedData['items'], 'item_code');
         $qtys = array_column($validatedData['items'], 'qty');
 
-        if (empty($item_ids)) {
+        if (empty($item_codes)) {
             // Handle the case when there are no items
             return response()->json([
                 'message' => 'success create item-out',
@@ -84,11 +84,11 @@ class ItemOutController extends Controller
         }
 
         // Prepare the SQL query
-        $placeholders = implode(',', array_fill(0, count($item_ids), '?'));
+        $placeholders = implode(',', array_fill(0, count($item_codes), '?'));
         $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, $placeholders), " . implode(',', array_fill(0, count($qtys), '?')) . ") WHERE id IN ($placeholders)";
 
         // Prepare the parameters
-        $params = array_merge($item_ids, $qtys, $item_ids);
+        $params = array_merge($item_codes, $qtys, $item_codes);
 
         // Execute the SQL query using prepared statement
         DB::update($sql, $params);
@@ -102,18 +102,18 @@ class ItemOutController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ItemOut $itemOut)
+    public function show(OutgoingItem $itemOut)
     {
         return response()->json([
             'message' => 'success get item-out',
-            'data' => $itemOut->load(['operator:id,name', 'division:id,name', 'details'])
+            'data' => $itemOut->load(['operator:code,name', 'division:code,name', 'details'])
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ItemOut $itemOut)
+    public function update(Request $request, OutgoingItem $itemOut)
     {
         //
     }
@@ -121,14 +121,14 @@ class ItemOutController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ItemOut $itemOut)
+    public function destroy(OutgoingItem $itemOut)
     {
         // update stock
         $details = $itemOut->details->toArray();
-        $item_ids = array_column($details, 'item_id');
+        $item_codes = array_column($details, 'item_code');
         $qtys = array_column($details, 'qty');
 
-        if (empty($item_ids)) {
+        if (empty($item_codes)) {
             // Handle the case when there are no items
             $itemOut->delete();
             return response()->json([
@@ -137,11 +137,11 @@ class ItemOutController extends Controller
         }
 
         // Prepare the SQL query
-        $placeholders = implode(',', array_fill(0, count($item_ids), '?'));
+        $placeholders = implode(',', array_fill(0, count($item_codes), '?'));
         $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, $placeholders), " . implode(',', array_fill(0, count($qtys), '?')) . ") WHERE id IN ($placeholders)";
 
         // Prepare the parameters
-        $params = array_merge($item_ids, $qtys, $item_ids);
+        $params = array_merge($item_codes, $qtys, $item_codes);
 
         // Execute the SQL query using prepared statement
         DB::update($sql, $params);

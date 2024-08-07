@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ItemInRequest;
+use App\Http\Requests\IncomingItemRequest;
 use App\Models\Employee;
-use App\Models\ItemIn;
+use App\Models\IncomingItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ItemInController extends Controller
+class IncomingItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class ItemInController extends Controller
         $perPage = $request->input('per_page', 10);
 
         // get all item-ins
-        $data = ItemIn::with(['employee:id,name', 'supplier:id,name']);
+        $data = IncomingItem::with(['employee:code,name', 'supplier:code,name']);
 
         // search by employee name
         $data->when($request->search, function ($data) use ($request) {
@@ -32,8 +32,8 @@ class ItemInController extends Controller
         });
 
         // filter by supplier
-        $data->when($request->supplier_id, function ($data) use ($request) {
-            $data->where('supplier_id', $request->supplier_id);
+        $data->when($request->supplier_code, function ($data) use ($request) {
+            $data->where('supplier_code', $request->supplier_code);
         });
 
         // paginate
@@ -48,7 +48,7 @@ class ItemInController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ItemInRequest $request)
+    public function store(IncomingItemRequest $request)
     {
         // get validated data
         $validatedData = $request->validated();
@@ -57,58 +57,58 @@ class ItemInController extends Controller
         $employeeID = Employee::where('nip', $userNIP)->first()->id;
         // directly create a new array with only the needed keys
         $data = [
-            'employee_id' => $employeeID,
-            'supplier_id' => $validatedData['supplier_id'],
+            'employee_code' => $employeeID,
+            'supplier_code' => $validatedData['supplier_code'],
             'total_items' => count($validatedData['items']),
         ];
 
-        $itemIn = ItemIn::create($data);
-        $itemIn->details()->createMany($validatedData['items']);
+        $IncomingItem = IncomingItem::create($data);
+        $IncomingItem->details()->createMany($validatedData['items']);
 
         // update stock
-        $item_ids = array_column($validatedData['items'], 'item_id');
+        $item_codes = array_column($validatedData['items'], 'item_code');
         $qtys = array_column($validatedData['items'], 'qty');
         // get last item stock
         
         // Create the SQL query dynamically
-        $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
+        $sql = "UPDATE items SET stock = stock + ELT(FIELD(id, " . implode(',', $item_codes) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_codes) . ");";
 
         // Execute the SQL query
         DB::statement($sql);
 
         return response()->json([
             'message' => 'success create item-in and updated stock',
-            'data' => $itemIn
+            'data' => $IncomingItem
         ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ItemIn $itemIn)
+    public function show(IncomingItem $IncomingItem)
     {
         return response()->json([
             'message' => 'success get item-in',
-            'data' => $itemIn->load(['employee:id,name', 'supplier:id,name', 'details'])
+            'data' => $IncomingItem->load(['employee:code,name', 'supplier:code,name', 'details'])
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ItemIn $itemIn)
+    public function destroy(IncomingItem $IncomingItem)
     {
         // update stock
-        $item_ids = array_column($itemIn->details->toArray(), 'item_id');
-        $qtys = array_column($itemIn->details->toArray(), 'qty');
+        $item_codes = array_column($IncomingItem->details->toArray(), 'item_code');
+        $qtys = array_column($IncomingItem->details->toArray(), 'qty');
         
         // Create the SQL query dynamically
-        $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_ids) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_ids) . ");";
+        $sql = "UPDATE items SET stock = stock - ELT(FIELD(id, " . implode(',', $item_codes) . "), " . implode(',', $qtys) . ") WHERE id IN (" . implode(',', $item_codes) . ");";
 
         // Execute the SQL query
         DB::statement($sql);
 
-        $itemIn->delete();
+        $IncomingItem->delete();
         return response()->json([
             'message' => 'success delete item-in',
         ]);

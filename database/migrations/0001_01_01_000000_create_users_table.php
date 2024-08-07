@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
             $table->string('username')->unique();
-            $table->string('nip')->unique();
+            $table->string('nip')->primary();
             $table->string('password');
             $table->enum('role', ['admin', 'unit', 'pengawas'])->default('unit');
-            $table->foreign('nip')->references('nip')->on('employees')->onDelete('cascade');
+            
+            $table->foreign('nip')->references('nip')->on('employees');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -30,7 +30,7 @@ return new class extends Migration
 
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->foreignId('user_id')->nullable()->index();
+            $table->foreignId('user_code')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->longText('payload');

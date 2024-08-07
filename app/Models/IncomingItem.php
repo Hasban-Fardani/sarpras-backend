@@ -5,15 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ItemIn extends Model
+class IncomingItem extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = [];
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
+    protected $autoIncrement = false;
 
     public function details()
     {
-        return $this->hasMany(ItemInDetail::class);
+        return $this->hasMany(IncomingItemDetail::class);
     }
 
     public function employee()
@@ -24,5 +27,10 @@ class ItemIn extends Model
     public function supplier()
     {
         return $this->belongsTo(Supplier::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'code';
     }
 }
